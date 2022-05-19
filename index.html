@@ -10,40 +10,82 @@
         
         <script>
             setInterval(gayupgradecps, 1000)
-            setInterval(gayNumber, 0)
-            let number = 0;
+            setInterval(renderMoney, 0)
+            let Money = 0;
+
             let gayupgradeint = 0;
             let gayupgradecost = 10;
-            function gayNumber()
+            let gayupgradeint2 = 0;
+            let gayupgradecost2 = 100;
+            let gayupgradeint3 = 0;
+            let gayupgradecost3 = 500;
+
+            function renderMoney()
             {
                 document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
-                document.getElementById("dick").innerHTML = number;
+                document.getElementById("upgrade2").innerHTML = "[cost " + gayupgradecost2 + "] Gay upgrade2 + 1 cps [" + gayupgradeint2 * 3 + "cps]";
+                document.getElementById("upgrade3").innerHTML = "[cost " + gayupgradecost3 + "] Gay upgrade3 + 1 cps [" + gayupgradeint3 * 3 + "cps]";
+                document.getElementById("moneyCounter").innerHTML = Money;
             }
             function tlacitko()
             {
-                number = number +1;
-                document.getElementById("dick").innerHTML = number;
+                Money = Money +1;
+                document.getElementById("moneyCounter").innerHTML = Money;
             }
+            function gayupgradecps()
+            {
+                Money = Money + gayupgradeint;
+                Money = Money + gayupgradeint2 * 3;
+                Money = Money + gayupgradeint3 * 9;
+            }
+
+
+            //Gay upgrade 1
             function gayUpgrade()
             {
-                if (number >= gayupgradecost)
+                if (Money >= gayupgradecost)
                 {
+                    Money = Money - gayupgradecost;
                     gayupgradecost = gayupgradecost * 1.2;
                     gayupgradecost = Math.round(gayupgradecost);
                     gayupgradeint = gayupgradeint + 1;
                     document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
-                    number = number - 10;
                 }
             }
-            function gayupgradecps()
+
+            //Gay upgrade 2
+            function gayUpgrade2()
             {
-                number = number + gayupgradeint;
+                if (Money >= gayupgradecost2)
+                {
+                    Money = Money - gayupgradecost2;
+                    gayupgradecost2 = gayupgradecost2 * 1.2;
+                    gayupgradecost2 = Math.round(gayupgradecost2);
+                    gayupgradeint2 = gayupgradeint2 + 1;
+                    document.getElementById("upgrade2").innerHTML = "[cost " + gayupgradecost2 + "] Gay upgrade3 + 1 cps [" + gayupgradeint2 * 3 + "cps]";
+                }
             }
+
+            //Gay upgrade 2
+            function gayUpgrade3()
+            {
+                if (Money >= gayupgradecost3)
+                {
+                    Money = Money - gayupgradecost3;
+                    gayupgradecost3 = gayupgradecost3 * 1.2;
+                    gayupgradecost3 = Math.round(gayupgradecost3);
+                    gayupgradeint3 = gayupgradeint3 + 1;
+                    document.getElementById("upgrade3").innerHTML = "[cost " + gayupgradecost3 + "] Gay upgrade2 + 1 cps [" + gayupgradeint3 * 9 + "cps]";
+                }
+            }
+
         </script>
         <a href="#" class="buttonStyle" onclick="tlacitko()">Click me</a>
         <a href="#" id="upgrade1" class="upgradeStyle" onclick="gayUpgrade()">Gay upgrade</a>
+        <a href="#" id="upgrade2" class="upgradeStyle2" onclick="gayUpgrade2()">Gay upgrade2</a>
+        <a href="#" id="upgrade3" class="upgradeStyle3" onclick="gayUpgrade3()">Gay upgrade2</a>
         <div class="text" color background-color position>
-            <h1 id="dick"> Ultimátní gay klikačka</h1>
+            <h1 id="moneyCounter"> Ultimátní gay klikačka</h1>
         </div>
     </body>
 </html>
