@@ -6,11 +6,16 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body style="background-color:rgb(234, 0, 255)">
-
+        
+        <a href="#" class="buttonStyle" onclick="tlacitko()">Click me</a>
+        <a href="#" id="upgrade1" class="upgradeStyle" onclick="gayUpgrade()">Gay upgrade</a>
+        <a href="#" id="upgrade2" class="upgradeStyle2" onclick="gayUpgrade2()">Gay upgrade2</a>
+        <a href="#" id="upgrade3" class="upgradeStyle3" onclick="gayUpgrade3()">Gay upgrade2</a>
+        <div class="text" color background-color position>
+            <h1 id="moneyCounter"> Ultimátní gay klikačka</h1>
+        </div>
         
         <script>
-            setInterval(gayupgradecps, 1000)
-            setInterval(renderMoney, 0)
             let Money = 0;
 
             let gayupgradeint = 0;
@@ -19,13 +24,49 @@
             let gayupgradecost2 = 100;
             let gayupgradeint3 = 0;
             let gayupgradecost3 = 500;
+        
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("gayupgradeint", gayupgradeint);
+                localStorage.setItem("gayupgradecost", gayupgradecost);
+                localStorage.setItem("gayupgradeint2", gayupgradeint2);
+                localStorage.setItem("gayupgradecost2", gayupgradecost2);
+                localStorage.setItem("gayupgradeint3", gayupgradeint3);
+                localStorage.setItem("gayupgradecost3", gayupgradecost3);
+
+                localStorage.getItem("gayupgradeint", gayupgradeint);
+                localStorage.getItem("gayupgradecost", gayupgradecost);
+                localStorage.getItem("gayupgradeint2", gayupgradeint2);
+                localStorage.getItem("gayupgradecost2", gayupgradecost2);
+                localStorage.getItem("gayupgradeint3", gayupgradeint3);
+                localStorage.getItem("gayupgradecost3", gayupgradecost3);
+            } else {
+                // Sorry! No Web Storage support..
+            }
+            
+            setInterval(gayupgradecps, 1000)
+            setInterval(renderMoney, 0)
+
+            if (typeof(Storage) !== "undefined") {
+                gayupgradeint = localStorage.gayupgradeint;
+                gayupgradecost = localStorage.gayupgradecost;
+                gayupgradeint2 = localStorage.gayupgradeint2;
+                gayupgradecost2 = localStorage.gayupgradecost2;
+                gayupgradeint3 = localStorage.gayupgradeint3;
+                gayupgradecost3 = localStorage.gayupgradecost3;
+                Money = localStorage.Money;
+            } else {
+                // Sorry! No Web Storage support..
+            }
+
 
             function renderMoney()
             {
                 document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
-                document.getElementById("upgrade2").innerHTML = "[cost " + gayupgradecost2 + "] Gay upgrade2 + 1 cps [" + gayupgradeint2 * 3 + "cps]";
-                document.getElementById("upgrade3").innerHTML = "[cost " + gayupgradecost3 + "] Gay upgrade3 + 1 cps [" + gayupgradeint3 * 3 + "cps]";
+                document.getElementById("upgrade2").innerHTML = "[cost " + gayupgradecost2 + "] Gay upgrade2 + 3 cps [" + gayupgradeint2 * 3 + "cps]";
+                document.getElementById("upgrade3").innerHTML = "[cost " + gayupgradecost3 + "] Gay upgrade3 + 9 cps [" + gayupgradeint3 * 9 + "cps]";
                 document.getElementById("moneyCounter").innerHTML = Money;
+
+
             }
             function tlacitko()
             {
@@ -49,7 +90,7 @@
                     gayupgradecost = gayupgradecost * 1.2;
                     gayupgradecost = Math.round(gayupgradecost);
                     gayupgradeint = gayupgradeint + 1;
-                    document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
+                    
                 }
             }
 
@@ -62,11 +103,10 @@
                     gayupgradecost2 = gayupgradecost2 * 1.2;
                     gayupgradecost2 = Math.round(gayupgradecost2);
                     gayupgradeint2 = gayupgradeint2 + 1;
-                    document.getElementById("upgrade2").innerHTML = "[cost " + gayupgradecost2 + "] Gay upgrade3 + 1 cps [" + gayupgradeint2 * 3 + "cps]";
                 }
             }
 
-            //Gay upgrade 2
+            //Gay upgrade 3
             function gayUpgrade3()
             {
                 if (Money >= gayupgradecost3)
@@ -75,17 +115,9 @@
                     gayupgradecost3 = gayupgradecost3 * 1.2;
                     gayupgradecost3 = Math.round(gayupgradecost3);
                     gayupgradeint3 = gayupgradeint3 + 1;
-                    document.getElementById("upgrade3").innerHTML = "[cost " + gayupgradecost3 + "] Gay upgrade2 + 1 cps [" + gayupgradeint3 * 9 + "cps]";
                 }
             }
 
         </script>
-        <a href="#" class="buttonStyle" onclick="tlacitko()">Click me</a>
-        <a href="#" id="upgrade1" class="upgradeStyle" onclick="gayUpgrade()">Gay upgrade</a>
-        <a href="#" id="upgrade2" class="upgradeStyle2" onclick="gayUpgrade2()">Gay upgrade2</a>
-        <a href="#" id="upgrade3" class="upgradeStyle3" onclick="gayUpgrade3()">Gay upgrade2</a>
-        <div class="text" color background-color position>
-            <h1 id="moneyCounter"> Ultimátní gay klikačka</h1>
-        </div>
     </body>
 </html>
