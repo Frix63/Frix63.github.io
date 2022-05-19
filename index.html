@@ -7,16 +7,43 @@
     </head>
     <body style="background-color:rgb(234, 0, 255)">
 
-
+        
         <script>
+            setInterval(gayupgradecps, 1000)
+            setInterval(gayNumber, 0)
+            let number = 0;
+            let gayupgradeint = 0;
+            let gayupgradecost = 10;
+            function gayNumber()
+            {
+                document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
+                document.getElementById("dick").innerHTML = number;
+            }
             function tlacitko()
             {
-            document.getElementById("dick").innerHTML = "sex";
+                number = number +1;
+                document.getElementById("dick").innerHTML = number;
+            }
+            function gayUpgrade()
+            {
+                if (number >= gayupgradecost)
+                {
+                    gayupgradecost = gayupgradecost * 1.2;
+                    gayupgradecost = Math.round(gayupgradecost);
+                    gayupgradeint = gayupgradeint + 1;
+                    document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
+                    number = number - 10;
+                }
+            }
+            function gayupgradecps()
+            {
+                number = number + gayupgradeint;
             }
         </script>
-        <button type="button" onclick="tlacitko()">Click Me!</button>
+        <a href="#" class="buttonStyle" onclick="tlacitko()">Click me</a>
+        <a href="#" id="upgrade1" class="upgradeStyle" onclick="gayUpgrade()">Gay upgrade</a>
         <div class="text" color background-color position>
-            <h1 id="dick"> Toto je web... No shit sherlock</h1>
+            <h1 id="dick"> Ultimátní gay klikačka</h1>
         </div>
     </body>
 </html>
