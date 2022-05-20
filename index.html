@@ -1,117 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>ChrisovoWeb</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body style="background-color:rgb(234, 0, 255)">
-        
-        <a href="#" class="buttonStyle" onclick="tlacitko()">Click me</a>
-        <a href="#" id="upgrade1" class="upgradeStyle" onclick="gayUpgrade()">Gay upgrade</a>
-        <a href="#" id="upgrade2" class="upgradeStyle2" onclick="gayUpgrade2()">Gay upgrade2</a>
-        <a href="#" id="upgrade3" class="upgradeStyle3" onclick="gayUpgrade3()">Gay upgrade2</a>
-        <div class="text" color background-color position>
-            <h1 id="moneyCounter"> Ultimátní gay klikačka</h1>
-        </div>
-        
-        <script>
-            let Money = 0;
 
-            let gayupgradeint = 0;
-            let gayupgradecost = 10;
-            let gayupgradeint2 = 0;
-            let gayupgradecost2 = 100;
-            let gayupgradeint3 = 0;
-            let gayupgradecost3 = 500;
+<head>
+    <meta charset="utf-8">
+    <title>ChrisovoWeb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            
-            function saveData()
-            {
-                if (typeof(Storage) !== "undefined") {
-                localStorage.setItem("gayupgradeint", gayupgradeint.toString);
-                localStorage.setItem("gayupgradecost", gayupgradecost.toString);
-                localStorage.setItem("gayupgradeint2", gayupgradeint2.toString);
-                localStorage.setItem("gayupgradecost2", gayupgradecost2.toString);
-                localStorage.setItem("gayupgradeint3", gayupgradeint3.toString);
-                localStorage.setItem("gayupgradecost3", gayupgradecost3.toString);
-                localStorage.setItem("moneyxd", Money);
-            } else {
-                // Sorry! No Web Storage support..
+<body style="background-color:rgb(234, 0, 255)">
+
+    <a href="#" class="buttonStyle" onclick="tlacitko()">Click me</a>
+    <a href="#" id="upgrade1" class="upgradeStyle" onclick="gayUpgrade()"></a>
+    <a href="#" id="upgrade2" class="upgradeStyle2" onclick="gayUpgrade2()"></a>
+    <a href="#" id="upgrade3" class="upgradeStyle3" onclick="gayUpgrade3()"></a>
+    <div class="text" color background-color position>
+        <h1 id="test"></h1>
+    </div>
+
+
+    <script>
+        let test = "test";
+
+        setInterval(gayupgradecps, 1000)
+        setInterval(renderMoney, 0)
+        setInterval(saveData, 1000)
+
+
+        document.getElementById("test").innerHTML = localStorage["moneyxd"];
+
+        function saveData() {
+            gayupgradeint = Number(Window.localStorage["ggayupgradeint"]);
+            gayupgradecost = Number(Window.localStorage["ggayupgradecost"]);
+            gayupgradeint2 = Number(Window.localStorage["ggayupgradeint2"]);
+            gayupgradecost2 = Number(Window.localStorage["ggayupgradecost"]);
+            gayupgradeint3 = Number(Window.localStorage["ggayupgradeint3"]);
+            gayupgradecost3 = Number(Window.localStorage["ggayupgradecost"]);
+            Money = Number(Window.localStorage["moneyxd"]);
+
+            Window.localStorage["ggayupgradeint"] = gayupgradeint.toString;
+            Window.localStorage["ggayupgradecost"] = gayupgradecost.toString;
+            Window.localStorage["ggayupgradeint2"] = gayupgradeint2.toString;
+            Window.localStorage["ggayupgradecost"] = gayupgradecost2.toString;
+            Window.localStorage["ggayupgradeint3"] = gayupgradeint3.toString;
+            Window.localStorage["ggayupgradecost"] = gayupgradecost3.toString;
+            Window.localStorage["moneyxd"] = Money.toString;
+        }
+
+        function renderMoney() {
+            document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
+            document.getElementById("upgrade2").innerHTML = "[cost " + gayupgradecost2 + "] Gay upgrade2 + 3 cps [" + gayupgradeint2 * 3 + "cps]";
+            document.getElementById("upgrade3").innerHTML = "[cost " + gayupgradecost3 + "] Gay upgrade3 + 9 cps [" + gayupgradeint3 * 9 + "cps]";
+            document.getElementById("moneyCounter").innerHTML = Money;
+
+
+        }
+
+        function tlacitko() {
+            Money = Money + 1;
+        }
+
+        function gayupgradecps() {
+            Money = Money + gayupgradeint;
+            Money = Money + gayupgradeint2 * 3;
+            Money = Money + gayupgradeint3 * 9;
+        }
+
+
+        //Gay upgrade 1
+        function gayUpgrade() {
+            if (Money >= gayupgradecost) {
+                Money = Money - gayupgradecost;
+                gayupgradecost = gayupgradecost * 1.2;
+                gayupgradecost = Math.round(gayupgradecost);
+                gayupgradeint = gayupgradeint + 1;
+
             }
+        }
+
+        //Gay upgrade 2
+        function gayUpgrade2() {
+            if (Money >= gayupgradecost2) {
+                Money = Money - gayupgradecost2;
+                gayupgradecost2 = gayupgradecost2 * 1.2;
+                gayupgradecost2 = Math.round(gayupgradecost2);
+                gayupgradeint2 = gayupgradeint2 + 1;
             }
-            
-            setInterval(gayupgradecps, 1000)
-            setInterval(renderMoney, 0)
+        }
 
-                gayupgradeint.valueOf = localStorage.getItem("gayupgradeint");
-                gayupgradecost.valueOf = localStorage.localStorage.getItem("gayupgradecost");
-                gayupgradeint2.valueOf = localStorage.localStorage.getItem("gayupgradeint2");
-                gayupgradecost2.valueOf = localStorage.localStorage.getItem("gayupgradecost2");
-                gayupgradeint3.valueOf = localStorage.localStorage.getItem("gayupgradeint3");
-                gayupgradecost3.valueOf = localStorage.localStorage.getItem("gayupgradecost3");
-                Money.valueOf = localStorage.getItem("moneyxd");
-
-
-            function renderMoney()
-            {
-                saveData();
-                document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
-                document.getElementById("upgrade2").innerHTML = "[cost " + gayupgradecost2 + "] Gay upgrade2 + 3 cps [" + gayupgradeint2 * 3 + "cps]";
-                document.getElementById("upgrade3").innerHTML = "[cost " + gayupgradecost3 + "] Gay upgrade3 + 9 cps [" + gayupgradeint3 * 9 + "cps]";
-                document.getElementById("moneyCounter").innerHTML = Money.valueOf();
-
-
+        //Gay upgrade 3
+        function gayUpgrade3() {
+            if (Money >= gayupgradecost3) {
+                Money = Money - gayupgradecost3;
+                gayupgradecost3 = gayupgradecost3 * 1.2;
+                gayupgradecost3 = Math.round(gayupgradecost3);
+                gayupgradeint3 = gayupgradeint3 + 1;
             }
-            function tlacitko()
-            {
-                Money = Money +1;
-            }
-            function gayupgradecps()
-            {
-                Money = Money + gayupgradeint;
-                Money = Money + gayupgradeint2 * 3;
-                Money = Money + gayupgradeint3 * 9;
-            }
+        }
+    </script>
+</body>
 
-
-            //Gay upgrade 1
-            function gayUpgrade()
-            {
-                if (Money >= gayupgradecost)
-                {
-                    Money = Money - gayupgradecost;
-                    gayupgradecost = gayupgradecost * 1.2;
-                    gayupgradecost = Math.round(gayupgradecost);
-                    gayupgradeint = gayupgradeint + 1;
-                    
-                }
-            }
-
-            //Gay upgrade 2
-            function gayUpgrade2()
-            {
-                if (Money >= gayupgradecost2)
-                {
-                    Money = Money - gayupgradecost2;
-                    gayupgradecost2 = gayupgradecost2 * 1.2;
-                    gayupgradecost2 = Math.round(gayupgradecost2);
-                    gayupgradeint2 = gayupgradeint2 + 1;
-                }
-            }
-
-            //Gay upgrade 3
-            function gayUpgrade3()
-            {
-                if (Money >= gayupgradecost3)
-                {
-                    Money = Money - gayupgradecost3;
-                    gayupgradecost3 = gayupgradecost3 * 1.2;
-                    gayupgradecost3 = Math.round(gayupgradecost3);
-                    gayupgradeint3 = gayupgradeint3 + 1;
-                }
-            }
-
-        </script>
-    </body>
 </html>
