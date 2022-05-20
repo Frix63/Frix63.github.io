@@ -24,54 +24,48 @@
             let gayupgradecost2 = 100;
             let gayupgradeint3 = 0;
             let gayupgradecost3 = 500;
-        
-            if (typeof(Storage) !== "undefined") {
-                localStorage.setItem("gayupgradeint", gayupgradeint);
-                localStorage.setItem("gayupgradecost", gayupgradecost);
-                localStorage.setItem("gayupgradeint2", gayupgradeint2);
-                localStorage.setItem("gayupgradecost2", gayupgradecost2);
-                localStorage.setItem("gayupgradeint3", gayupgradeint3);
-                localStorage.setItem("gayupgradecost3", gayupgradecost3);
 
-                localStorage.getItem("gayupgradeint", gayupgradeint);
-                localStorage.getItem("gayupgradecost", gayupgradecost);
-                localStorage.getItem("gayupgradeint2", gayupgradeint2);
-                localStorage.getItem("gayupgradecost2", gayupgradecost2);
-                localStorage.getItem("gayupgradeint3", gayupgradeint3);
-                localStorage.getItem("gayupgradecost3", gayupgradecost3);
+            
+            function saveData()
+            {
+                if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("gayupgradeint", gayupgradeint.toString);
+                localStorage.setItem("gayupgradecost", gayupgradecost.toString);
+                localStorage.setItem("gayupgradeint2", gayupgradeint2.toString);
+                localStorage.setItem("gayupgradecost2", gayupgradecost2.toString);
+                localStorage.setItem("gayupgradeint3", gayupgradeint3.toString);
+                localStorage.setItem("gayupgradecost3", gayupgradecost3.toString);
+                localStorage.setItem("moneyxd", Money);
             } else {
                 // Sorry! No Web Storage support..
+            }
             }
             
             setInterval(gayupgradecps, 1000)
             setInterval(renderMoney, 0)
 
-            if (typeof(Storage) !== "undefined") {
-                gayupgradeint = localStorage.gayupgradeint;
-                gayupgradecost = localStorage.gayupgradecost;
-                gayupgradeint2 = localStorage.gayupgradeint2;
-                gayupgradecost2 = localStorage.gayupgradecost2;
-                gayupgradeint3 = localStorage.gayupgradeint3;
-                gayupgradecost3 = localStorage.gayupgradecost3;
-                Money = localStorage.Money;
-            } else {
-                // Sorry! No Web Storage support..
-            }
+                gayupgradeint.valueOf = localStorage.getItem("gayupgradeint");
+                gayupgradecost.valueOf = localStorage.localStorage.getItem("gayupgradecost");
+                gayupgradeint2.valueOf = localStorage.localStorage.getItem("gayupgradeint2");
+                gayupgradecost2.valueOf = localStorage.localStorage.getItem("gayupgradecost2");
+                gayupgradeint3.valueOf = localStorage.localStorage.getItem("gayupgradeint3");
+                gayupgradecost3.valueOf = localStorage.localStorage.getItem("gayupgradecost3");
+                Money.valueOf = localStorage.getItem("moneyxd");
 
 
             function renderMoney()
             {
+                saveData();
                 document.getElementById("upgrade1").innerHTML = "[cost " + gayupgradecost + "] Gay upgrade + 1 cps [" + gayupgradeint + "cps]";
                 document.getElementById("upgrade2").innerHTML = "[cost " + gayupgradecost2 + "] Gay upgrade2 + 3 cps [" + gayupgradeint2 * 3 + "cps]";
                 document.getElementById("upgrade3").innerHTML = "[cost " + gayupgradecost3 + "] Gay upgrade3 + 9 cps [" + gayupgradeint3 * 9 + "cps]";
-                document.getElementById("moneyCounter").innerHTML = Money;
+                document.getElementById("moneyCounter").innerHTML = Money.valueOf();
 
 
             }
             function tlacitko()
             {
                 Money = Money +1;
-                document.getElementById("moneyCounter").innerHTML = Money;
             }
             function gayupgradecps()
             {
