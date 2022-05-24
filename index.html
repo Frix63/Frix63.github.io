@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color:rgb(234, 0, 255)">
+<body style="background-color:#022b3b">
 
     <a href="#" class="buttonStyle" onclick="tlacitko()">Click me</a>
     <a href="#" id="upgrade1" class="upgradeStyle" onclick="gayUpgrade()"></a>
     <a href="#" id="upgrade2" class="upgradeStyle2" onclick="gayUpgrade2()"></a>
     <a href="#" id="upgrade3" class="upgradeStyle3" onclick="gayUpgrade3()"></a>
-    <a href="#" id="upgrade3" class="errorMessage" onclick="window.localStorage.clear(); document.location.reload(true);">clear data</a>
+    <a href="#" id="upgrade3" class="errorMessage" onclick="clearData();">clear data</a>
     <div class="text" color background-color position>
         <h1 id="moneyCounter"></h1>
     </div>
@@ -110,6 +110,16 @@
             Money = Money + gayupgradeint;
             Money = Money + gayupgradeint2 * 3;
             Money = Money + gayupgradeint3 * 9;
+        }
+
+        function clearData() {
+            let clearDataText = "Press OK button to delete all your progress!\nPress Cancel to cancel progress dump.";
+            if (confirm(clearDataText) == true) {
+                window.localStorage.clear();
+                document.location.reload(true);
+            } else {
+                return;
+            }
         }
 
         //Gay upgrade 1
