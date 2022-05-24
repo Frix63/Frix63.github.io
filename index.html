@@ -50,6 +50,8 @@
                 localStorage.setItem("gayc3", 500);
 
                 localStorage.setItem("moneyxd", 0);
+            } else if (localStorage.getItem("gayc1") === "0") {
+                document.location.reload(true);
             } else {
                 Money = 0;
                 gayupgradeint = 0;
@@ -73,6 +75,9 @@
             gayupgradecost2 = Number(localStorage.getItem("gayc2"));
             gayupgradeint3 = Number(localStorage.getItem("gayi3"));
             gayupgradecost3 = Number(localStorage.getItem("gayc3"));
+        }
+        if (localStorage.getItem("gayc1") === "0") {
+            document.location.reload(true);
         }
 
         setInterval(gayupgradecps, 1000)
