@@ -17,7 +17,7 @@
     border: none;
     color: white;
     padding: 100px 200px;
-    top: 25%;
+    top: 50%;
     left: 25%;
     position: absolute;
     text-align: left;
@@ -39,7 +39,7 @@
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 8px;
+    font-size: 24px;
     margin: 0 0;
     cursor: pointer;
 }
@@ -49,13 +49,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 14%;
+    top: 16%;
     left: 2%;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 8px;
+    font-size: 24px;
     margin: 0 0;
     cursor: pointer;
 }
@@ -65,13 +65,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 20%;
+    top: 24%;
     left: 2%;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 8px;
+    font-size: 24px;
     margin: 0 0;
     cursor: pointer;
 }
@@ -82,12 +82,12 @@
     color: white;
     padding: 10px 20px;
     top: 20%;
-    left: 80%;
+    right: 10%;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 8px;
+    font-size: 24px;
     margin: 0 0;
     cursor: pointer;
 }
