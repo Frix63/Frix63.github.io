@@ -13,18 +13,24 @@
     position: absolute;
 }
 
-.buttonStyle {
-    background-color: #00bd74;
-    border: none;
+.buttonText {
     color: white;
-    padding: 100px 200px;
+    position: absolute;
+    margin: 0% -5%;
     top: 50%;
-    left: 25%;
+    left: 50%;
+}
+
+.buttonStyle {
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    padding: 100%;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 150px;
+    font-size: 100%;
     margin: 0 0;
     cursor: pointer;
 }
@@ -91,4 +97,11 @@
     font-size: 24px;
     margin: 0 0;
     cursor: pointer;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
 }
