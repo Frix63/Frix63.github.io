@@ -33,6 +33,8 @@ javascript.js
         Upgradeint[number of upgrade] = 0;
         Upgradecost[number of upgrade] = 500;
 
+        localStorage.setItem("gayi[number of upgrade]", Number(localStorage.getItem("gayi[number of upgrade]")));
+        localStorage.setItem("gayc[number of upgrade]", Number(localStorage.getItem("gayc[number of upgrade]")));
         
         Upgradeint[number of upgrade] = Number(localStorage.getItem("gayi[number of upgrade]"));
         Upgradecost[number of upgrade] = Number(localStorage.getItem("gayc[number of upgrade]"));
@@ -42,10 +44,12 @@ javascript.js
         localStorage.setItem("gayc[number of upgrade]", Upgradecost[number of upgrade]);
 
         
-        document.getElementById("upgrade[number of upgrade]").innerHTML = "[cost " + Upgradecost[number of upgrade] + "] Gay upgrade[number of upgrade] + 9 cps [" + Upgradeint[number of upgrade] * 9 + "cps]";
+    document.getElementById("upgrade[number of upgrade]").innerHTML = " Gay upgrade[number of upgrade] + 9 cps<br>[cost " + Upgradecost[number of upgrade] + "]<br> [" + Upgradeint[number of upgrade] * 9 + "cps]";
 
         
         Money = Money + Upgradeint[number of upgrade] * 9;
+
+         + (Upgradeint[number of upgrade] * 9)
 
         
         localStorage.setItem("gayi[number of upgrade]", 0);

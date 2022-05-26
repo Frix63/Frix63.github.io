@@ -15,6 +15,10 @@ function start() {
         localStorage.setItem("gayc4", 1500);
         localStorage.setItem("gayi5", 0);
         localStorage.setItem("gayc5", 5000);
+        localStorage.setItem("gayi6", 0);
+        localStorage.setItem("gayc6", 15000);
+        localStorage.setItem("gayi7", 0);
+        localStorage.setItem("gayc7", 40000);
 
         localStorage.setItem("moneyxd", 0);
     } else if (localStorage.getItem("moneyxd") === "NaN") {
@@ -28,6 +32,10 @@ function start() {
         localStorage.setItem("gayc4", 1500);
         localStorage.setItem("gayi5", 0);
         localStorage.setItem("gayc5", 5000);
+        localStorage.setItem("gayi6", 0);
+        localStorage.setItem("gayc6", 15000);
+        localStorage.setItem("gayi7", 0);
+        localStorage.setItem("gayc7", 40000);
 
         localStorage.setItem("moneyxd", 0);
     } else if (localStorage.getItem("moneyxd") === "0" && localStorage.getItem("gayi1") === "0") {
@@ -41,6 +49,10 @@ function start() {
         localStorage.setItem("gayc4", 1500);
         localStorage.setItem("gayi5", 0);
         localStorage.setItem("gayc5", 5000);
+        localStorage.setItem("gayi6", 0);
+        localStorage.setItem("gayc6", 15000);
+        localStorage.setItem("gayi7", 0);
+        localStorage.setItem("gayc7", 40000);
 
         localStorage.setItem("moneyxd", 0);
     } else if (localStorage.getItem("gayc1") === "0") {
@@ -55,6 +67,10 @@ function start() {
         localStorage.setItem("gayc4", Number(localStorage.getItem("gayc4")));
         localStorage.setItem("gayi5", Number(localStorage.getItem("gayi5")));
         localStorage.setItem("gayc5", Number(localStorage.getItem("gayc5")));
+        localStorage.setItem("gayi6", Number(localStorage.getItem("gayi6")));
+        localStorage.setItem("gayc6", Number(localStorage.getItem("gayc6")));
+        localStorage.setItem("gayi7", Number(localStorage.getItem("gayi7")));
+        localStorage.setItem("gayc7", Number(localStorage.getItem("gayc7")));
         document.location.reload(true);
     } else {
         Money = 0;
@@ -68,6 +84,10 @@ function start() {
         Upgradecost4 = 1500;
         Upgradeint5 = 0;
         Upgradecost5 = 5000;
+        Upgradeint6 = 0;
+        Upgradecost6 = 15000;
+        Upgradeint7 = 0;
+        Upgradecost7 = 40000;
         localStorage.setItem("moneyxd", Number(localStorage.getItem("moneyxd")));
         localStorage.setItem("gayi1", Number(localStorage.getItem("gayi1")));
         localStorage.setItem("gayc1", Number(localStorage.getItem("gayc1")));
@@ -79,6 +99,10 @@ function start() {
         localStorage.setItem("gayc4", Number(localStorage.getItem("gayc4")));
         localStorage.setItem("gayi5", Number(localStorage.getItem("gayi5")));
         localStorage.setItem("gayc5", Number(localStorage.getItem("gayc5")));
+        localStorage.setItem("gayi6", Number(localStorage.getItem("gayi6")));
+        localStorage.setItem("gayc6", Number(localStorage.getItem("gayc6")));
+        localStorage.setItem("gayi7", Number(localStorage.getItem("gayi7")));
+        localStorage.setItem("gayc7", Number(localStorage.getItem("gayc7")));
     }
     Money = Number(localStorage.getItem("moneyxd"));
     Upgradeint = Number(localStorage.getItem("gayi1"));
@@ -91,6 +115,10 @@ function start() {
     Upgradecost4 = Number(localStorage.getItem("gayc4"));
     Upgradeint5 = Number(localStorage.getItem("gayi5"));
     Upgradecost5 = Number(localStorage.getItem("gayc5"));
+    Upgradeint6 = Number(localStorage.getItem("gayi6"));
+    Upgradecost6 = Number(localStorage.getItem("gayc6"));
+    Upgradeint7 = Number(localStorage.getItem("gayi7"));
+    Upgradecost7 = Number(localStorage.getItem("gayc7"));
 }
 if (localStorage.getItem("gayc1") === "0") {
     document.location.reload(true);
@@ -113,6 +141,10 @@ function saveData() {
     localStorage.setItem("gayic4", Upgradecost4);
     localStorage.setItem("gayi5", Upgradeint5);
     localStorage.setItem("gayc5", Upgradecost5);
+    localStorage.setItem("gayi6", Upgradeint6);
+    localStorage.setItem("gayc6", Upgradecost6);
+    localStorage.setItem("gayi7", Upgradeint7);
+    localStorage.setItem("gayc7", Upgradecost7);
 }
 
 function renderMoney() {
@@ -121,6 +153,8 @@ function renderMoney() {
     document.getElementById("upgrade3").innerHTML = " Gay upgrade3 + 9 cps<br>[cost " + Upgradecost3 + "]<br> [" + Upgradeint3 * 9 + "cps]";
     document.getElementById("upgrade4").innerHTML = " Gay upgrade4 + 18 cps<br>[cost " + Upgradecost4 + "]<br> [" + Upgradeint4 * 18 + "cps]";
     document.getElementById("upgrade5").innerHTML = " Gay upgrade5 + 36 cps<br>[cost " + Upgradecost5 + "]<br> [" + Upgradeint5 * 36 + "cps]";
+    document.getElementById("upgrade6").innerHTML = " Gay upgrade6 + 72 cps<br>[cost " + Upgradecost6 + "]<br> [" + Upgradeint6 * 72 + "cps]";
+    document.getElementById("upgrade7").innerHTML = " Gay upgrade7 + 144 cps<br>[cost " + Upgradecost7 + "]<br> [" + Upgradeint7 * 144 + "cps]";
     document.getElementById("moneyCounter").innerHTML = Money;
 
 }
@@ -130,7 +164,7 @@ function tlacitko() {
 }
 
 function AutoClicksPerSecond() {
-    Cps = Upgradeint + (Upgradeint2 * 3) + (Upgradeint3 * 9) + (Upgradeint4 * 18) + (Upgradeint5 * 36);
+    Cps = Upgradeint + (Upgradeint2 * 3) + (Upgradeint3 * 9) + (Upgradeint4 * 18) + (Upgradeint5 * 36) + (Upgradeint6 * 72) + (Upgradeint7 * 144);
     document.getElementById("CPSTextDisplay").innerHTML = Cps + " AutoCPS";
 }
 
@@ -140,6 +174,8 @@ function Upgradecps() {
     Money = Money + Upgradeint3 * 9;
     Money = Money + Upgradeint4 * 18;
     Money = Money + Upgradeint5 * 36;
+    Money = Money + Upgradeint6 * 72;
+    Money = Money + Upgradeint7 * 144;
 }
 
 function clearData() {
@@ -156,6 +192,10 @@ function clearData() {
         localStorage.setItem("gayc4", 1500);
         localStorage.setItem("gayi5", 0);
         localStorage.setItem("gayc5", 5000);
+        localStorage.setItem("gayi6", 0);
+        localStorage.setItem("gayc6", 15000);
+        localStorage.setItem("gayi7", 0);
+        localStorage.setItem("gayc7", 40000);
         Money = 0;
         Upgradeint = 0;
         Upgradecost = 10;
@@ -167,6 +207,10 @@ function clearData() {
         Upgradecost4 = 1500;
         Upgradeint5 = 0;
         Upgradecost5 = 5000;
+        Upgradeint6 = 0;
+        Upgradecost6 = 15000;
+        Upgradeint7 = 0;
+        Upgradecost7 = 40000;
         document.location.reload(true);
     } else {
         return;
@@ -222,6 +266,26 @@ function Upgrade5() {
         Upgradecost5 = Upgradecost5 * 1.2;
         Upgradecost5 = Math.round(Upgradecost5);
         Upgradeint5 = Upgradeint5 + 1;
+        return;
+    }
+}
+
+function Upgrade6() {
+    if (Money >= Upgradecost6) {
+        Money = Money - Upgradecost6;
+        Upgradecost6 = Upgradecost6 * 1.2;
+        Upgradecost6 = Math.round(Upgradecost6);
+        Upgradeint6 = Upgradeint6 + 1;
+        return;
+    }
+}
+
+function Upgrade7() {
+    if (Money >= Upgradecost7) {
+        Money = Money - Upgradecost7;
+        Upgradecost7 = Upgradecost7 * 1.2;
+        Upgradecost7 = Math.round(Upgradecost7);
+        Upgradeint7 = Upgradeint7 + 1;
         return;
     }
 }
