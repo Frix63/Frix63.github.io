@@ -55,7 +55,7 @@ function start() {
         localStorage.setItem("gayc7", 40000);
 
         localStorage.setItem("moneyxd", 0);
-    } else if (localStorage.getItem("gayc1") === "0") {
+    } else if (localStorage.getItem("gayc1") === "0" || localStorage.getItem("gayc2") === "0" || localStorage.getItem("gayc3") === "0" || localStorage.getItem("gayc4") === "0" || localStorage.getItem("gayc5") === "0" || localStorage.getItem("gayc6") === "0" || localStorage.getItem("gayc7") === "0") {
         localStorage.setItem("moneyxd", Number(localStorage.getItem("moneyxd")));
         localStorage.setItem("gayi1", Number(localStorage.getItem("gayi1")));
         localStorage.setItem("gayc1", Number(localStorage.getItem("gayc1")));
