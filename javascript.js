@@ -94,7 +94,7 @@ function saveData() {
     localStorage.setItem("gayi3", Upgradeint3);
     localStorage.setItem("gayc3", Upgradecost3);
     localStorage.setItem("gayi4", Upgradeint4);
-    localStorage.setItem("gayi4", Upgradecost4);
+    localStorage.setItem("gayic4", Upgradecost4);
 }
 
 function renderMoney() {

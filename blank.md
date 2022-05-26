@@ -13,7 +13,7 @@
 
         
         localStorage.setItem("gayi5", Upgradeint5);
-        localStorage.setItem("gayi5", Upgradecost5);
+        localStorage.setItem("gayc5", Upgradecost5);
 
         
         document.getElementById("upgrade5").innerHTML = "[cost " + Upgradecost5 + "] Gay upgrade5 + 9 cps [" + upgrade5 * 9 + "cps]";
