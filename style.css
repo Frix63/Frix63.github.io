@@ -9,16 +9,50 @@
     left: 0%;
     color: #022b3b;
     background-color: rgb(0, 0, 0);
-    font-size: 50px;
+    font-size: 2vw;
     position: absolute;
 }
 
 .buttonText {
     color: white;
     position: absolute;
+    text-align: center;
+    align-items: center;
+    transform: rotate(270deg);
+    font-size: 0.8vw;
     margin: 0% 0%;
-    top: 50%;
-    left: 50%;
+    right: 2.5vw;
+    bottom: 15vw;
+}
+
+.prestigePower {
+    color: white;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    font-size: 0.8vw;
+    margin: 0% 0%;
+    right: 3.5vw;
+    bottom: 33vw;
+    animation: txt 5s ease-out infinite normal;
+}
+
+@keyframes txt {
+    0% {
+        transform: rotate(-24deg);
+    }
+    25% {
+        transform: rotate(-31deg);
+    }
+    50% {
+        transform: rotate(-24deg);
+    }
+    75% {
+        transform: rotate(-31deg);
+    }
+    100% {
+        transform: rotate(-24deg);
+    }
 }
 
 .buttonStyle {
@@ -27,7 +61,7 @@
     color: transparent;
     padding: 100%;
     position: absolute;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 100%;
@@ -40,13 +74,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 1%;
-    left: 1%;
+    top: 1vw;
+    left: 1vw;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.2vw;
     margin: 0 0;
     cursor: pointer;
 }
@@ -56,13 +90,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 31%;
-    left: 1%;
+    top: 11vw;
+    left: 1vw;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.2vw;
     margin: 0 0;
     cursor: pointer;
 }
@@ -72,13 +106,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 61%;
-    left: 1%;
+    top: 21vw;
+    left: 1vw;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.2vw;
     margin: 0 0;
     cursor: pointer;
 }
@@ -88,13 +122,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 91%;
-    left: 1%;
+    top: 31vw;
+    left: 1vw;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.2vw;
     margin: 0 0;
     cursor: pointer;
 }
@@ -104,13 +138,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 121%;
-    left: 1%;
+    top: 41vw;
+    left: 1vw;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.2vw;
     margin: 0 0;
     cursor: pointer;
 }
@@ -120,13 +154,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 151%;
-    left: 1%;
+    top: 51vw;
+    left: 1vw;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.2vw;
     margin: 0 0;
     cursor: pointer;
 }
@@ -136,13 +170,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 181%;
-    left: 1%;
+    top: 61vw;
+    left: 1vw;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.2vw;
     margin: 0 0;
     cursor: pointer;
 }
@@ -152,13 +186,13 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    top: 20%;
-    right: 10%;
+    top: 2vw;
+    right: 2vw;
     position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.2vw;
     margin: 0 0;
     cursor: pointer;
 }
@@ -173,9 +207,49 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 0.5vw;
     margin: 0 0;
     cursor: pointer;
+}
+
+.AllTimeMoney {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    top: 1vw;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.5vw;
+    margin: 0 0;
+    cursor: pointer;
+}
+
+.ATMBar {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+    right: 5vw;
+    bottom: 5vw;
+    height: 30vw;
+    width: 3vw;
+    border-radius: 1vw;
+    background-color: rgb(37, 37, 37);
+}
+
+.ATMBarProgress {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+    display: flex;
+    width: 3vw;
+    height: 10vw;
+    border-radius: 1vw;
+    background-color: violet;
 }
 
 html,
@@ -200,9 +274,9 @@ body {
     position: absolute;
     border: none;
     padding: 5px;
-    font: 24px/36px sans-serif;
-    width: 450px;
-    height: 500px;
+    font: 1.2vw/36px sans-serif;
+    width: 20vw;
+    height: 40vw;
     overflow-y: scroll;
 }
 

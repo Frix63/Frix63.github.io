@@ -1,5 +1,4 @@
 let Cps = 0;
-
 start();
 
 function start() {
@@ -20,6 +19,7 @@ function start() {
         localStorage.setItem("gayi7", 0);
         localStorage.setItem("gayc7", 40000);
 
+        localStorage.setItem("ATM", 0);
         localStorage.setItem("moneyxd", 0);
     } else if (localStorage.getItem("moneyxd") === "NaN") {
         localStorage.setItem("gayi1", 0);
@@ -37,6 +37,7 @@ function start() {
         localStorage.setItem("gayi7", 0);
         localStorage.setItem("gayc7", 40000);
 
+        localStorage.setItem("ATM", 0);
         localStorage.setItem("moneyxd", 0);
     } else if (localStorage.getItem("moneyxd") === "0" && localStorage.getItem("gayi1") === "0") {
         localStorage.setItem("gayi1", 0);
@@ -54,9 +55,11 @@ function start() {
         localStorage.setItem("gayi7", 0);
         localStorage.setItem("gayc7", 40000);
 
+        localStorage.setItem("ATM", 0);
         localStorage.setItem("moneyxd", 0);
     } else if (localStorage.getItem("gayc1") === "0" || localStorage.getItem("gayc2") === "0" || localStorage.getItem("gayc3") === "0" || localStorage.getItem("gayc4") === "0" || localStorage.getItem("gayc5") === "0" || localStorage.getItem("gayc6") === "0" || localStorage.getItem("gayc7") === "0") {
         localStorage.setItem("moneyxd", Number(localStorage.getItem("moneyxd")));
+        localStorage.setItem("ATM", Number(localStorage.getItem("ATM")));
         localStorage.setItem("gayi1", Number(localStorage.getItem("gayi1")));
         localStorage.setItem("gayc1", Number(localStorage.getItem("gayc1")));
         localStorage.setItem("gayi2", Number(localStorage.getItem("gayi2")));
@@ -88,7 +91,9 @@ function start() {
         Upgradecost6 = 15000;
         Upgradeint7 = 0;
         Upgradecost7 = 40000;
+        AllTimeMoney = 0;
         localStorage.setItem("moneyxd", Number(localStorage.getItem("moneyxd")));
+        localStorage.setItem("ATM", Number(localStorage.getItem("ATM")));
         localStorage.setItem("gayi1", Number(localStorage.getItem("gayi1")));
         localStorage.setItem("gayc1", Number(localStorage.getItem("gayc1")));
         localStorage.setItem("gayi2", Number(localStorage.getItem("gayi2")));
@@ -105,6 +110,7 @@ function start() {
         localStorage.setItem("gayc7", Number(localStorage.getItem("gayc7")));
     }
     Money = Number(localStorage.getItem("moneyxd"));
+    AllTimeMoney = Number(localStorage.getItem("ATM"));
     Upgradeint = Number(localStorage.getItem("gayi1"));
     Upgradecost = Number(localStorage.getItem("gayc1"));
     Upgradeint2 = Number(localStorage.getItem("gayi2"));
@@ -130,6 +136,7 @@ setInterval(saveData, 500)
 setInterval(AutoClicksPerSecond, 0)
 
 function saveData() {
+    localStorage.setItem("ATM", AllTimeMoney);
     localStorage.setItem("moneyxd", Money)
     localStorage.setItem("gayi1", Upgradeint);
     localStorage.setItem("gayc1", Upgradecost);
@@ -155,17 +162,20 @@ function renderMoney() {
     document.getElementById("upgrade5").innerHTML = " Gay upgrade5 + 36 cps<br>[cost " + Upgradecost5 + "]<br> [" + Upgradeint5 * 36 + "cps]";
     document.getElementById("upgrade6").innerHTML = " Gay upgrade6 + 72 cps<br>[cost " + Upgradecost6 + "]<br> [" + Upgradeint6 * 72 + "cps]";
     document.getElementById("upgrade7").innerHTML = " Gay upgrade7 + 144 cps<br>[cost " + Upgradecost7 + "]<br> [" + Upgradeint7 * 144 + "cps]";
+    document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
+    document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
     document.getElementById("moneyCounter").innerHTML = Money;
 
 }
 
 function tlacitko() {
-    Money = Money + 1;
+    Money = Money + 1 * PrestigeMultiplier;
+    AllTimeMoney = AllTimeMoney + 1;
 }
 
 function AutoClicksPerSecond() {
     Cps = Upgradeint + (Upgradeint2 * 3) + (Upgradeint3 * 9) + (Upgradeint4 * 18) + (Upgradeint5 * 36) + (Upgradeint6 * 72) + (Upgradeint7 * 144);
-    document.getElementById("CPSTextDisplay").innerHTML = Cps + " AutoCPS";
+    document.getElementById("CPSTextDisplay").innerHTML = Cps + " Generated/s";
 }
 
 function Upgradecps() {
@@ -176,6 +186,13 @@ function Upgradecps() {
     Money = Money + Upgradeint5 * 36;
     Money = Money + Upgradeint6 * 72;
     Money = Money + Upgradeint7 * 144;
+    AllTimeMoney = AllTimeMoney + Upgradeint;
+    AllTimeMoney = AllTimeMoney + Upgradeint2 * 3;
+    AllTimeMoney = AllTimeMoney + Upgradeint3 * 9;
+    AllTimeMoney = AllTimeMoney + Upgradeint4 * 18;
+    AllTimeMoney = AllTimeMoney + Upgradeint5 * 36;
+    AllTimeMoney = AllTimeMoney + Upgradeint6 * 72;
+    AllTimeMoney = AllTimeMoney + Upgradeint7 * 144;
 }
 
 function clearData() {
@@ -197,6 +214,7 @@ function clearData() {
         localStorage.setItem("gayi7", 0);
         localStorage.setItem("gayc7", 40000);
         Money = 0;
+        AllTimeMoney = 0;
         Upgradeint = 0;
         Upgradecost = 10;
         Upgradeint2 = 0;
@@ -216,6 +234,33 @@ function clearData() {
         return;
     }
 }
+
+
+
+let perc = 0;
+let PrestigeGoal = 10000;
+let PrestigeMultiplier = 1;
+let ATMMultiplier = 1;
+setInterval(changeStyle, 0);
+
+
+function changeStyle() {
+    perc = (AllTimeMoney / PrestigeGoal) * 100;
+    document.getElementById("PPDisplay").innerHTML = "Clicks " + PrestigeMultiplier + "x";
+    if (PrestigeGoal >= AllTimeMoney) {
+        Math.round((perc + Number.EPSILON) * 100) / 100
+        document.getElementById("ATMBarID").style.height = 5 + perc + "%";
+        document.getElementById("ATMBarID").innerHTML = Math.round((perc + Number.EPSILON) * 100) / 100 + "%";
+    } else {
+        PrestigeMultiplier = PrestigeMultiplier + 1;
+        PrestigeGoal = PrestigeGoal * 4;
+    }
+}
+
+
+
+
+
 
 //Gay upgrade 1
 function Upgrade() {
