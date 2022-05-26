@@ -23,11 +23,12 @@ IN index.html write:
         <a href="#" id="upgrade[number of upgrade]" class="upgradeStyle[number of upgrade]" onclick="Upgrade[number of upgrade]()"></a>
 
 javascript.js
-        localStorage.setItem("gayi[number of upgrade]", Number(localStorage.getItem("gayi[number of upgrade]")));
-        localStorage.setItem("gayc[number of upgrade]", Number(localStorage.getItem("gayc[number of upgrade]")));
         
         localStorage.setItem("gayi[number of upgrade]", 0);
         localStorage.setItem("gayc[number of upgrade]", 500);
+
+        localStorage.setItem("gayi[number of upgrade]", Number(localStorage.getItem("gayi[number of upgrade]")));
+        localStorage.setItem("gayc[number of upgrade]", Number(localStorage.getItem("gayc[number of upgrade]")));
         
         Upgradeint[number of upgrade] = 0;
         Upgradecost[number of upgrade] = 500;
@@ -38,10 +39,10 @@ javascript.js
 
         
         localStorage.setItem("gayi[number of upgrade]", Upgradeint[number of upgrade]);
-        localStorage.setItem("gayi[number of upgrade]", Upgradecost[number of upgrade]);
+        localStorage.setItem("gayc[number of upgrade]", Upgradecost[number of upgrade]);
 
         
-        document.getElementById("upgrade[number of upgrade]").innerHTML = "[cost " + Upgradecost[number of upgrade] + "] Gay upgrade[number of upgrade] + 9 cps [" + upgrade[number of upgrade] * 9 + "cps]";
+        document.getElementById("upgrade[number of upgrade]").innerHTML = "[cost " + Upgradecost[number of upgrade] + "] Gay upgrade[number of upgrade] + 9 cps [" + Upgradeint[number of upgrade] * 9 + "cps]";
 
         
         Money = Money + Upgradeint[number of upgrade] * 9;
@@ -61,7 +62,7 @@ function Upgrade[number of upgrade]() {
         Upgradeint[number of upgrade] = Upgradeint[number of upgrade] + 1;
         return;
     }
-
+}
 
 
 
