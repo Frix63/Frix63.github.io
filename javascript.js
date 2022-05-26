@@ -1,4 +1,3 @@
-let Cps = 0;
 start();
 
 function start() {
@@ -129,7 +128,16 @@ function start() {
 if (localStorage.getItem("gayc1") === "0") {
     document.location.reload(true);
 }
-
+let Cps = 0;
+let RawCPSInt = 0;
+let RawCPSDisplayedRender = 0;
+let perc = 0;
+let PrestigeGoal = 10000;
+let PrestigeMultiplier = 1;
+let ATMMultiplier = 1;
+RawCPSRender();
+setInterval(RawCPSRender, 1000)
+setInterval(changeStyle, 0);
 setInterval(Upgradecps, 1000)
 setInterval(renderMoney, 0)
 setInterval(saveData, 500)
@@ -170,7 +178,8 @@ function renderMoney() {
 
 function tlacitko() {
     Money = Money + 1 * PrestigeMultiplier;
-    AllTimeMoney = AllTimeMoney + 1;
+    AllTimeMoney = AllTimeMoney + 1 * PrestigeMultiplier;
+    RawCPSInt = RawCPSInt + 1;
 }
 
 function AutoClicksPerSecond() {
@@ -237,12 +246,6 @@ function clearData() {
 
 
 
-let perc = 0;
-let PrestigeGoal = 10000;
-let PrestigeMultiplier = 1;
-let ATMMultiplier = 1;
-setInterval(changeStyle, 0);
-
 
 function changeStyle() {
     perc = (AllTimeMoney / PrestigeGoal) * 100;
@@ -252,14 +255,17 @@ function changeStyle() {
         document.getElementById("ATMBarID").style.height = 5 + perc + "%";
         document.getElementById("ATMBarID").innerHTML = Math.round((perc + Number.EPSILON) * 100) / 100 + "%";
     } else {
-        PrestigeMultiplier = PrestigeMultiplier + 1;
+        PrestigeMultiplier = PrestigeMultiplier * 2;
         PrestigeGoal = PrestigeGoal * 4;
     }
 }
 
 
-
-
+function RawCPSRender() {
+    RawCPSDisplayedRender = RawCPSInt;
+    RawCPSInt = 0;
+    document.getElementById("RawCPSID").innerHTML = Math.round(RawCPSDisplayedRender) + "RawCPS";
+}
 
 
 //Gay upgrade 1

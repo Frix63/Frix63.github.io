@@ -16,13 +16,11 @@
 .buttonText {
     color: white;
     position: absolute;
-    text-align: center;
-    align-items: center;
-    transform: rotate(270deg);
+    text-align: right;
     font-size: 0.8vw;
-    margin: 0% 0%;
-    right: 2.5vw;
-    bottom: 15vw;
+    margin: 0 0;
+    right: 3vw;
+    bottom: 3vw;
 }
 
 .prestigePower {
@@ -227,6 +225,21 @@
     cursor: pointer;
 }
 
+.RawCPS {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    top: 2vw;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.5vw;
+    margin: 0 0;
+    cursor: pointer;
+}
+
 .ATMBar {
     position: absolute;
     align-items: center;
@@ -245,7 +258,7 @@
     align-items: center;
     justify-content: center;
     transform: rotate(180deg);
-    display: flex;
+    display: inline-flex;
     width: 3vw;
     height: 10vw;
     border-radius: 1vw;
