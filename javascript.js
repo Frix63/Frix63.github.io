@@ -1,3 +1,5 @@
+let Cps = 0;
+
 start();
 
 function start() {
@@ -97,7 +99,7 @@ if (localStorage.getItem("gayc1") === "0") {
 setInterval(Upgradecps, 1000)
 setInterval(renderMoney, 0)
 setInterval(saveData, 500)
-setInterval(renderBackground, 50)
+setInterval(AutoClicksPerSecond, 0)
 
 function saveData() {
     localStorage.setItem("moneyxd", Money)
@@ -125,6 +127,11 @@ function renderMoney() {
 
 function tlacitko() {
     Money = Money + 1;
+}
+
+function AutoClicksPerSecond() {
+    Cps = Upgradeint + (Upgradeint2 * 3) + (Upgradeint3 * 9) + (Upgradeint4 * 18) + (Upgradeint5 * 36);
+    document.getElementById("CPSTextDisplay").innerHTML = Cps + " AutoCPS";
 }
 
 function Upgradecps() {

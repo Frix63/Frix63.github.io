@@ -163,6 +163,21 @@
     cursor: pointer;
 }
 
+.CPSDisplay {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    top: 0%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 0;
+    cursor: pointer;
+}
+
 html,
 body {
     margin: 0;
