@@ -172,7 +172,7 @@ function renderMoney() {
     document.getElementById("upgrade7").innerHTML = " Gay upgrade7 + 144 cps<br>[cost " + Upgradecost7 + "]<br> [" + Upgradeint7 * 144 + "cps]";
     document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
     document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
-    document.getElementById("moneyCounter").innerHTML = Money;
+    document.getElementById("moneyCounter").innerHTML = Money + " $ ";
 
 }
 
