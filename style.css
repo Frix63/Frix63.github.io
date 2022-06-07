@@ -13,6 +13,80 @@
     position: absolute;
 }
 
+.Basement {
+    display: block;
+    margin: 0vw 0vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 0vw;
+    bottom: 0vh;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.SDef {
+    transform-origin: center;
+    display: block;
+    margin: 0vw 0vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 6vw;
+    bottom: 0vh;
+    height: 50%;
+    width: 50%;
+    filter: drop-shadow(0 0 50px white);
+    z-index: 0;
+    pointer-events: none;
+    animation: shadower 6s ease-in-out normal infinite;
+    transition: all 0.2s ease;
+}
+
+@keyframes shadower {
+    0% {
+        filter: drop-shadow(0 0 50px white);
+    }
+    50% {
+        filter: drop-shadow(0 0 100px white);
+    }
+    100% {
+        filter: drop-shadow(0 0 50px white);
+    }
+}
+
+.Anim {
+    transform-origin: center;
+    display: block;
+    margin: 0vw 0vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 6vw;
+    bottom: 0vh;
+    height: 51%;
+    width: 51%;
+    filter: drop-shadow(0 0 50px white);
+    z-index: 0;
+    pointer-events: none;
+    animation: shadower 10s ease-in-out normal infinite;
+    transition: all 0.2s ease;
+}
+
+@keyframes shadower {
+    0% {
+        filter: drop-shadow(0 0 50px white);
+    }
+    50% {
+        filter: drop-shadow(0 0 100px white);
+    }
+    100% {
+        filter: drop-shadow(0 0 50px white);
+    }
+}
+
 .buttonText {
     color: white;
     position: absolute;
@@ -21,6 +95,7 @@
     margin: 50px 00px;
     right: 20px;
     bottom: -30px;
+    z-index: 1;
 }
 
 .prestigePower {

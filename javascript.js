@@ -1,3 +1,5 @@
+//WORKING DO NOT TOUCH!!!
+
 start();
 
 function start() {
@@ -177,6 +179,8 @@ function renderMoney() {
 }
 
 function tlacitko() {
+    document.getElementById("SImage").classList.toggle('SDef');
+    document.getElementById("SImage").classList.toggle('Anim');
     Money = Money + 1 * PrestigeMultiplier;
     AllTimeMoney = AllTimeMoney + 1 * PrestigeMultiplier;
     RawCPSInt = RawCPSInt + 1;
@@ -186,6 +190,7 @@ function AutoClicksPerSecond() {
     Cps = Upgradeint + (Upgradeint2 * 3) + (Upgradeint3 * 9) + (Upgradeint4 * 18) + (Upgradeint5 * 36) + (Upgradeint6 * 72) + (Upgradeint7 * 144);
     document.getElementById("CPSTextDisplay").innerHTML = Cps + " Generated/s";
 }
+
 
 function Upgradecps() {
     Money = Money + Upgradeint;
