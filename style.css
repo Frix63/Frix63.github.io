@@ -1,4 +1,8 @@
 * {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
     margin: 0;
     padding: 0;
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
@@ -46,7 +50,7 @@
     z-index: 0;
     pointer-events: none;
     animation: shadower 6s ease-in-out normal infinite;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
 }
 
 @keyframes shadower {
@@ -76,7 +80,7 @@
     z-index: 0;
     pointer-events: none;
     animation: shadower 6s ease-in-out normal infinite;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
 }
 
 @keyframes shadower {
@@ -135,7 +139,6 @@
 
 .buttonStyle {
     background-color: transparent;
-    border: none;
     color: transparent;
     padding: 100%;
     position: absolute;
@@ -148,120 +151,105 @@
 }
 
 .upgradeStyle {
-    background-color: #025951;
-    border: none;
+    min-width: 250px;
+    max-width: 250px;
+    background-color: black;
+    border: 1px solid white;
     color: white;
-    padding: 10px 20px;
-    top: 10px;
-    left: 1vw;
-    position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
-    margin: 0 0;
+    font-size: 1.5vh;
+    margin-bottom: 2px;
     cursor: pointer;
 }
 
 .upgradeStyle2 {
-    background-color: #047a6f;
-    border: none;
+    min-width: 250px;
+    max-width: 250px;
+    background-color: black;
+    border: 1px solid white;
     color: white;
-    padding: 10px 20px;
-    top: 140px;
-    left: 1vw;
-    position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
-    margin: 0 0;
+    font-size: 1.5vh;
+    margin-bottom: 2px;
     cursor: pointer;
 }
 
 .upgradeStyle3 {
-    background-color: #0bac9c;
-    border: none;
+    min-width: 250px;
+    max-width: 250px;
+    background-color: black;
+    border: 1px solid white;
     color: white;
-    padding: 10px 20px;
-    top: 270px;
-    left: 1vw;
-    position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
-    margin: 0 0;
+    font-size: 1.5vh;
+    margin-bottom: 2px;
     cursor: pointer;
 }
 
 .upgradeStyle4 {
-    background-color: #0ecdba;
-    border: none;
+    min-width: 250px;
+    max-width: 250px;
+    background-color: black;
+    border: 1px solid white;
     color: white;
-    padding: 10px 20px;
-    top: 400px;
-    left: 1vw;
-    position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
-    margin: 0 0;
+    font-size: 1.5vh;
+    margin-bottom: 2px;
     cursor: pointer;
 }
 
 .upgradeStyle5 {
-    background-color: #1bedd8;
-    border: none;
+    min-width: 250px;
+    max-width: 250px;
+    background-color: black;
+    border: 1px solid white;
     color: white;
-    padding: 10px 20px;
-    top: 530px;
-    left: 1vw;
-    position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
-    margin: 0 0;
+    font-size: 1.5vh;
+    margin-bottom: 2px;
     cursor: pointer;
 }
 
 .upgradeStyle6 {
-    background-color: #45fbe9;
-    border: none;
+    min-width: 250px;
+    max-width: 250px;
+    background-color: black;
+    border: 1px solid white;
     color: white;
-    padding: 10px 20px;
-    top: 660px;
-    left: 1vw;
-    position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
-    margin: 0 0;
+    font-size: 1.5vh;
+    margin-bottom: 2px;
     cursor: pointer;
 }
 
 .upgradeStyle7 {
-    background-color: #50f6e5;
-    border: none;
+    min-width: 250px;
+    max-width: 250px;
+    background-color: black;
+    border: 1px solid white;
     color: white;
-    padding: 10px 20px;
-    top: 790px;
-    left: 1vw;
-    position: absolute;
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
-    margin: 0 0;
+    font-size: 1.5vh;
+    margin-bottom: 2px;
     cursor: pointer;
 }
 
 .errorMessage {
     background-color: #ff0000;
-    border: none;
     color: white;
     padding: 10px 20px;
     bottom: 20px;
@@ -270,13 +258,12 @@
     text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2vw;
+    font-size: 1.5vh;
     margin: 0 0;
     cursor: pointer;
 }
 
 .CPSDisplay {
-    border: none;
     color: white;
     padding: 10px 20px;
     top: 0%;
@@ -291,7 +278,6 @@
 }
 
 .AllTimeMoney {
-    border: none;
     color: white;
     padding: 10px 20px;
     top: 15px;
@@ -306,7 +292,6 @@
 }
 
 .RawCPS {
-    border: none;
     color: white;
     padding: 10px 20px;
     top: 30px;
@@ -362,9 +347,9 @@ body {
 /* Box styles */
 
 .upgradeBox {
+    min-width: 300px;
     top: 100px;
     position: absolute;
-    border: none;
     padding: 5px;
     font: 1.2vw/36px sans-serif;
     width: 280px;

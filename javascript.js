@@ -258,13 +258,13 @@ function saveData() {
 function renderMoney() {
     AllTimeMoney = Math.round(AllTimeMoney * 10) / 10;
     Money = Math.round(Money * 10) / 10;
-    document.getElementById("upgrade1").innerHTML = " Gay upgrade + 1 cps<br>[cost " + Upgradecost + "]<br> [" + Upgradeint + "cps]";
-    document.getElementById("upgrade2").innerHTML = " Gay upgrade2 + 3 cps<br>[cost " + Upgradecost2 + "]<br> [" + Upgradeint2 * 3 + "cps]";
-    document.getElementById("upgrade3").innerHTML = " Gay upgrade3 + 9 cps<br>[cost " + Upgradecost3 + "]<br> [" + Upgradeint3 * 9 + "cps]";
-    document.getElementById("upgrade4").innerHTML = " Gay upgrade4 + 18 cps<br>[cost " + Upgradecost4 + "]<br> [" + Upgradeint4 * 18 + "cps]";
-    document.getElementById("upgrade5").innerHTML = " Gay upgrade5 + 36 cps<br>[cost " + Upgradecost5 + "]<br> [" + Upgradeint5 * 36 + "cps]";
-    document.getElementById("upgrade6").innerHTML = " Gay upgrade6 + 72 cps<br>[cost " + Upgradecost6 + "]<br> [" + Upgradeint6 * 72 + "cps]";
-    document.getElementById("upgrade7").innerHTML = " Gay upgrade7 + 144 cps<br>[cost " + Upgradecost7 + "]<br> [" + Upgradeint7 * 144 + "cps]";
+    document.getElementById("upgrade1").innerHTML = "‎ Gay upgrade + 1 cps<br>‎ [cost " + Upgradecost + "]<br> ‎ [" + Upgradeint + "cps]";
+    document.getElementById("upgrade2").innerHTML = "‎ Gay upgrade2 + 3 cps<br>‎ [cost " + Upgradecost2 + "]<br> ‎ [" + Upgradeint2 * 3 + "cps]";
+    document.getElementById("upgrade3").innerHTML = "‎ Gay upgrade3 + 9 cps<br>‎ [cost " + Upgradecost3 + "]<br> ‎ [" + Upgradeint3 * 9 + "cps]";
+    document.getElementById("upgrade4").innerHTML = "‎ Gay upgrade4 + 18 cps<br>‎ [cost " + Upgradecost4 + "]<br> ‎ [" + Upgradeint4 * 18 + "cps]";
+    document.getElementById("upgrade5").innerHTML = "‎ Gay upgrade5 + 36 cps<br>‎ [cost " + Upgradecost5 + "]<br> ‎ [" + Upgradeint5 * 36 + "cps]";
+    document.getElementById("upgrade6").innerHTML = "‎ Gay upgrade6 + 72 cps<br>‎ [cost " + Upgradecost6 + "]<br> ‎ [" + Upgradeint6 * 72 + "cps]";
+    document.getElementById("upgrade7").innerHTML = "‎ Gay upgrade7 + 144 cps<br>‎ [cost " + Upgradecost7 + "]<br> ‎ [" + Upgradeint7 * 144 + "cps]";
     document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
     document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
     document.getElementById("moneyCounter").innerHTML = Money + " $ ";
