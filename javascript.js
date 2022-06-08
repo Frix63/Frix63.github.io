@@ -140,7 +140,7 @@ let ATMMultiplier = 1;
 RawCPSRender();
 setInterval(RawCPSRender, 1000)
 setInterval(changeStyle, 0);
-setInterval(Upgradecps, 1000)
+setInterval(Upgradecps, 100)
 setInterval(renderMoney, 0)
 setInterval(saveData, 500)
 setInterval(AutoClicksPerSecond, 0)
@@ -165,6 +165,8 @@ function saveData() {
 }
 
 function renderMoney() {
+    AllTimeMoney = Math.round(AllTimeMoney * 10) / 10;
+    Money = Math.round(Money * 10) / 10;
     document.getElementById("upgrade1").innerHTML = " Gay upgrade + 1 cps<br>[cost " + Upgradecost + "]<br> [" + Upgradeint + "cps]";
     document.getElementById("upgrade2").innerHTML = " Gay upgrade2 + 3 cps<br>[cost " + Upgradecost2 + "]<br> [" + Upgradeint2 * 3 + "cps]";
     document.getElementById("upgrade3").innerHTML = " Gay upgrade3 + 9 cps<br>[cost " + Upgradecost3 + "]<br> [" + Upgradeint3 * 9 + "cps]";
@@ -175,7 +177,13 @@ function renderMoney() {
     document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
     document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
     document.getElementById("moneyCounter").innerHTML = Money + " $ ";
-
+    if ((Money - Math.floor(Money)) === 0) {
+        document.getElementById("moneyCounter").innerHTML = Money + ".0 $ ";
+    }
+    if ((AllTimeMoney - Math.floor(AllTimeMoney)) === 0) {
+        document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + ".0 All time money";
+        document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + ".0 / " + PrestigeGoal;
+    }
 }
 
 function tlacitko() {
@@ -187,26 +195,26 @@ function tlacitko() {
 }
 
 function AutoClicksPerSecond() {
-    Cps = Upgradeint + (Upgradeint2 * 3) + (Upgradeint3 * 9) + (Upgradeint4 * 18) + (Upgradeint5 * 36) + (Upgradeint6 * 72) + (Upgradeint7 * 144);
+    Cps = (Upgradeint2 * 0.1) + (Upgradeint2 * 3) + (Upgradeint3 * 9) + (Upgradeint4 * 18) + (Upgradeint5 * 36) + (Upgradeint6 * 72) + (Upgradeint7 * 144);
     document.getElementById("CPSTextDisplay").innerHTML = Cps + " Generated/s";
 }
 
 
 function Upgradecps() {
-    Money = Money + Upgradeint;
-    Money = Money + Upgradeint2 * 3;
-    Money = Money + Upgradeint3 * 9;
-    Money = Money + Upgradeint4 * 18;
-    Money = Money + Upgradeint5 * 36;
-    Money = Money + Upgradeint6 * 72;
-    Money = Money + Upgradeint7 * 144;
-    AllTimeMoney = AllTimeMoney + Upgradeint;
-    AllTimeMoney = AllTimeMoney + Upgradeint2 * 3;
-    AllTimeMoney = AllTimeMoney + Upgradeint3 * 9;
-    AllTimeMoney = AllTimeMoney + Upgradeint4 * 18;
-    AllTimeMoney = AllTimeMoney + Upgradeint5 * 36;
-    AllTimeMoney = AllTimeMoney + Upgradeint6 * 72;
-    AllTimeMoney = AllTimeMoney + Upgradeint7 * 144;
+    Money = Money + Upgradeint * 1 / 10;
+    Money = Money + Upgradeint2 * 3 / 10;
+    Money = Money + Upgradeint3 * 9 / 10;
+    Money = Money + Upgradeint4 * 18 / 10;
+    Money = Money + Upgradeint5 * 36 / 10;
+    Money = Money + Upgradeint6 * 72 / 10;
+    Money = Money + Upgradeint7 * 144 / 10;
+    AllTimeMoney = AllTimeMoney + Upgradeint / 10;
+    AllTimeMoney = AllTimeMoney + Upgradeint2 * 3 / 10;
+    AllTimeMoney = AllTimeMoney + Upgradeint3 * 9 / 10;
+    AllTimeMoney = AllTimeMoney + Upgradeint4 * 18 / 10;
+    AllTimeMoney = AllTimeMoney + Upgradeint5 * 36 / 10;
+    AllTimeMoney = AllTimeMoney + Upgradeint6 * 72 / 10;
+    AllTimeMoney = AllTimeMoney + Upgradeint7 * 144 / 10;
 }
 
 function clearData() {
