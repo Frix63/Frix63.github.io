@@ -137,6 +137,7 @@ let perc = 0;
 let PrestigeGoal = 10000;
 let PrestigeMultiplier = 1;
 let ATMMultiplier = 1;
+comboB = false;
 RawCPSRender();
 setInterval(RawCPSRender, 1000)
 setInterval(changeStyle, 0);
@@ -144,6 +145,96 @@ setInterval(Upgradecps, 100)
 setInterval(renderMoney, 0)
 setInterval(saveData, 500)
 setInterval(AutoClicksPerSecond, 0)
+setInterval(repeat, 0);
+setInterval(repeat1s, 0);
+
+function comboreset() {
+    if (RawCPSDisplayedRender === 0) {
+        combo = 0;
+    }
+}
+
+function repeat() {
+    if (combo > 0) {
+        document.getElementById("combo").style.display = "block";
+    } else {
+        document.getElementById("combo").style.display = "none";
+        comboB = false;
+    }
+
+
+    switch (Math.floor(combo / 10)) {
+        case 1:
+            document.getElementById('combo').style.color = '##fff7c9';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px ##fff7c9)';
+            break;
+        case 2:
+            document.getElementById('combo').style.color = '#fff1a1';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #fff1a1)';
+            break;
+        case 3:
+            document.getElementById('combo').style.color = '#ffe54f';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ffe54f)';
+            break;
+        case 4:
+            document.getElementById('combo').style.color = '#ffde24';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ffde24)';
+            break;
+        case 5:
+            document.getElementById('combo').style.color = '#ffd900';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ffd900)';
+            break;
+        case 6:
+            document.getElementById('combo').style.color = '#ffbb00';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ffbb00)';
+            break;
+        case 7:
+            document.getElementById('combo').style.color = '#ffb300';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ffb300)';
+            break;
+        case 8:
+            document.getElementById('combo').style.color = '#ff9900';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ff9900)';
+            break;
+        case 9:
+            document.getElementById('combo').style.color = '#ff8400';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ff8400)';
+            break;
+        case 10:
+            document.getElementById('combo').style.color = '#ff5e00';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ff5e00)';
+            break;
+        case 11:
+            document.getElementById('combo').style.color = '#ff3c00';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ff3c00)';
+            break;
+        case 12:
+            document.getElementById('combo').style.color = '#ff2a00';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ff2a00)';
+            break;
+        case 13:
+            document.getElementById('combo').style.color = '#ff0000';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ff0000)';
+            break;
+        case 14:
+            comboB = true;
+            break;
+        default:
+            document.getElementById('combo').style.color = 'white';
+            document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px white)';
+            break;
+    }
+    if (comboB === true) {
+        document.getElementById('combo').style.color = '#ff0000';
+        document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ff0000)';
+    }
+}
+
+function repeat1s() {
+    if (combo >= 1) {
+        setTimeout(comboreset, 1000)
+    }
+}
 
 function saveData() {
     localStorage.setItem("ATM", AllTimeMoney);
@@ -177,6 +268,7 @@ function renderMoney() {
     document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
     document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
     document.getElementById("moneyCounter").innerHTML = Money + " $ ";
+    document.getElementById("combo").innerHTML = combo + "x";
     if ((Money - Math.floor(Money)) === 0) {
         document.getElementById("moneyCounter").innerHTML = Money + ".0 $ ";
     }
@@ -187,6 +279,7 @@ function renderMoney() {
 }
 
 function tlacitko() {
+    combo = combo + 1;
     document.getElementById("SImage").classList.toggle('SDef');
     document.getElementById("SImage").classList.toggle('Anim');
     Money = Money + 1 * PrestigeMultiplier;
@@ -352,4 +445,34 @@ function Upgrade7() {
         Upgradeint7 = Upgradeint7 + 1;
         return;
     }
+}
+
+let combo = 0;
+
+var followCursor = (
+    function() {
+        var s = document.getElementById('combo');
+        s.style.position = 'absolute';
+        s.style.color = 'white';
+        s.style.pointerEvents = 'none';
+        s.style.filter = 'drop-shadow(0 0 10px white)';
+
+        return {
+            init: function() {
+                document.body.appendChild(s);
+            },
+
+            run: function(e) {
+                var e = e || window.event;
+                s.style.left = (e.clientX + 10) + 'px';
+                s.style.top = (e.clientY + 10) + 'px';
+                getMouseCoords(e);
+                s.innerHTML = combo + "x";
+            }
+        };
+    }());
+
+window.onload = function() {
+    followCursor.init();
+    document.body.onmousemove = followCursor.run;
 }

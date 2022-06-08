@@ -13,6 +13,10 @@
     position: absolute;
 }
 
+.ComboText {
+    color: white;
+}
+
 .Basement {
     display: block;
     margin: 0vw 0vh;
