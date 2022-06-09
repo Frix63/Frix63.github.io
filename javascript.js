@@ -1,4 +1,7 @@
-//WORKING DO NOT TOUCH!!!
+/*
+WORKING DO NOT TOUCH!!!
+Frix63
+*/
 
 start();
 
@@ -137,16 +140,17 @@ let perc = 0;
 let PrestigeGoal = 10000;
 let PrestigeMultiplier = 1;
 let ATMMultiplier = 1;
+let PrestigeCounter = 1;
 comboB = false;
 RawCPSRender();
 setInterval(RawCPSRender, 1000)
-setInterval(changeStyle, 0);
+setInterval(PrestigeInterval, 0);
 setInterval(Upgradecps, 100)
 setInterval(renderMoney, 0)
 setInterval(saveData, 500)
 setInterval(AutoClicksPerSecond, 0)
-setInterval(repeat, 0);
-setInterval(repeat1s, 0);
+setInterval(ComboMathInterval, 0);
+setInterval(ComboInterval, 0);
 
 function comboreset() {
     if (RawCPSDisplayedRender === 0) {
@@ -154,7 +158,7 @@ function comboreset() {
     }
 }
 
-function repeat() {
+function ComboMathInterval() {
     if (combo > 0) {
         document.getElementById("combo").style.display = "block";
     } else {
@@ -230,7 +234,7 @@ function repeat() {
     }
 }
 
-function repeat1s() {
+function ComboInterval() {
     if (combo >= 1) {
         setTimeout(comboreset, 1000)
     }
@@ -353,7 +357,7 @@ function clearData() {
 
 
 
-function changeStyle() {
+function PrestigeInterval() {
     perc = (AllTimeMoney / PrestigeGoal) * 100;
     document.getElementById("PPDisplay").innerHTML = "Clicks " + PrestigeMultiplier + "x";
     if (PrestigeGoal >= AllTimeMoney) {
@@ -363,6 +367,7 @@ function changeStyle() {
     } else {
         PrestigeMultiplier = PrestigeMultiplier * 2;
         PrestigeGoal = PrestigeGoal * 4;
+        PrestigeCounter = PrestigeCounter + 1;
     }
 }
 
@@ -466,7 +471,6 @@ var followCursor = (
                 var e = e || window.event;
                 s.style.left = (e.clientX + 10) + 'px';
                 s.style.top = (e.clientY + 10) + 'px';
-                getMouseCoords(e);
                 s.innerHTML = combo + "x";
             }
         };

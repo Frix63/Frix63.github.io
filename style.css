@@ -1,3 +1,10 @@
+/* 
+WORKING DO NOT TOUCH!!!
+Frix63
+*/
+
+@import "upgradeStyles.css";
+@import "backgroundPictures.css";
 * {
     -webkit-user-drag: none;
     -khtml-user-drag: none;
@@ -8,7 +15,7 @@
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
 }
 
-.text {
+.moneyText {
     top: 0%;
     left: 0%;
     color: #000000;
@@ -19,80 +26,6 @@
 
 .ComboText {
     color: white;
-}
-
-.Basement {
-    display: block;
-    margin: 0vw 0vh;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    left: 0vw;
-    bottom: 0vh;
-    height: 100%;
-    width: 100%;
-    z-index: -2;
-    pointer-events: none;
-}
-
-.SDef {
-    transform-origin: center;
-    display: block;
-    margin: 0vw 0vh;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    left: 0%;
-    bottom: 0vh;
-    height: 50%;
-    width: 50%;
-    filter: drop-shadow(0 0 50px white);
-    z-index: 0;
-    pointer-events: none;
-    animation: shadower 6s ease-in-out normal infinite;
-    transition: all 0.2s ease-in-out;
-}
-
-@keyframes shadower {
-    0% {
-        filter: drop-shadow(0 0 50px white);
-    }
-    50% {
-        filter: drop-shadow(0 0 100px white);
-    }
-    100% {
-        filter: drop-shadow(0 0 50px white);
-    }
-}
-
-.Anim {
-    transform-origin: center;
-    display: block;
-    margin: 0vw 0vh;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    left: 0%;
-    bottom: 0vh;
-    height: 51%;
-    width: 51%;
-    filter: drop-shadow(0 0 50px white);
-    z-index: 0;
-    pointer-events: none;
-    animation: shadower 6s ease-in-out normal infinite;
-    transition: all 0.2s ease-in-out;
-}
-
-@keyframes shadower {
-    0% {
-        filter: drop-shadow(0 0 50px white);
-    }
-    50% {
-        filter: drop-shadow(0 0 100px white);
-    }
-    100% {
-        filter: drop-shadow(0 0 50px white);
-    }
 }
 
 .buttonText {
@@ -147,104 +80,6 @@
     display: inline-block;
     font-size: 100%;
     margin: 0 0;
-    cursor: pointer;
-}
-
-.upgradeStyle {
-    min-width: 250px;
-    max-width: 250px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5vh;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
-
-.upgradeStyle2 {
-    min-width: 250px;
-    max-width: 250px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5vh;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
-
-.upgradeStyle3 {
-    min-width: 250px;
-    max-width: 250px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5vh;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
-
-.upgradeStyle4 {
-    min-width: 250px;
-    max-width: 250px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5vh;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
-
-.upgradeStyle5 {
-    min-width: 250px;
-    max-width: 250px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5vh;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
-
-.upgradeStyle6 {
-    min-width: 250px;
-    max-width: 250px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5vh;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
-
-.upgradeStyle7 {
-    min-width: 250px;
-    max-width: 250px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5vh;
-    margin-bottom: 2px;
     cursor: pointer;
 }
 
