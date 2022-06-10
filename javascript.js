@@ -140,7 +140,7 @@ let perc = 0;
 let PrestigeGoal = 10000;
 let PrestigeMultiplier = 1;
 let ATMMultiplier = 1;
-let PrestigeCounter = 1;
+let PrestigeScore = 1;
 comboB = false;
 RawCPSRender();
 setInterval(RawCPSRender, 1000)
@@ -151,6 +151,7 @@ setInterval(saveData, 500)
 setInterval(AutoClicksPerSecond, 0)
 setInterval(ComboMathInterval, 0);
 setInterval(ComboInterval, 0);
+setInterval(SabloChanger, 0);
 
 function comboreset() {
     if (RawCPSDisplayedRender === 0) {
@@ -367,7 +368,7 @@ function PrestigeInterval() {
     } else {
         PrestigeMultiplier = PrestigeMultiplier * 2;
         PrestigeGoal = PrestigeGoal * 4;
-        PrestigeCounter = PrestigeCounter + 1;
+        PrestigeScore = PrestigeScore + 1;
     }
 }
 
@@ -479,4 +480,29 @@ var followCursor = (
 window.onload = function() {
     followCursor.init();
     document.body.onmousemove = followCursor.run;
+}
+
+function SabloChanger() {
+    switch (PrestigeScore) {
+        case 1:
+            document.getElementById("SImage").src = "Sablos/sabloclick.png";
+            document.getElementById("BackgroundIMG").src = "Background/Basement.jpg";
+            break;
+        case 2:
+            document.getElementById("SImage").src = "Sablos/SabloRee.png";
+            document.getElementById("BackgroundIMG").src = "Background/SHell.jpg";
+            break;
+        case 3:
+            document.getElementById("SImage").src = "Sablos/RetroSablo.png";
+            document.getElementById("BackgroundIMG").src = "Background/SRetB.jpg";
+            break;
+        case 4:
+            document.getElementById("SImage").src = "Sablos/SabloDrip.png";
+            document.getElementById("BackgroundIMG").src = "Background/SDripB.jpg";
+            break;
+        default:
+            document.getElementById("SImage").src = "Sablos/SabloDrip.png";
+            document.getElementById("BackgroundIMG").src = "Background/SDripB.jpg";
+            break;
+    }
 }
