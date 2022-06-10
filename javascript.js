@@ -500,6 +500,22 @@ function SabloChanger() {
             document.getElementById("SImage").src = "Sablos/SabloDrip.png";
             document.getElementById("BackgroundIMG").src = "Background/SDripB.jpg";
             break;
+        case 5:
+            document.getElementById("SImage").src = "Sablos/Xiablo.png";
+            document.getElementById("BackgroundIMG").src = "Background/XiabloB.jpg";
+            break;
+        case 6:
+            document.getElementById("SImage").src = "Sablos/SabloDripWT.png";
+            document.getElementById("BackgroundIMG").src = "Background/SabloCar.jpg";
+            break;
+        case 7:
+            document.getElementById("SImage").src = "Sablos/SabloGun.png";
+            document.getElementById("BackgroundIMG").src = "Background/SabloGunB.jpg";
+            break;
+        case 8:
+            document.getElementById("SImage").src = "Sablos/SabloPenis.png";
+            document.getElementById("BackgroundIMG").src = "Background/Kachlicky.jpg";
+            break;
         default:
             document.getElementById("SImage").src = "Sablos/SabloDrip.png";
             document.getElementById("BackgroundIMG").src = "Background/SDripB.jpg";
