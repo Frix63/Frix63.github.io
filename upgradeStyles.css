@@ -1,109 +1,241 @@
-/*
+    /*
 WORKING DO NOT TOUCH!!!
 Frix63
 */
-
-.upgradeStyle {
-    min-width: 270px;
-    max-width: 270px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: clamp(12px, 1.5vh, 19px);
-    margin-bottom: 2px;
-    margin-left: 7px;
-    cursor: pointer;
-}
-
-.upgradeStyle2 {
-    min-width: 270px;
-    max-width: 270px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: clamp(12px, 1.5vh, 19px);
-    margin-bottom: 2px;
-    margin-left: 7px;
-    cursor: pointer;
-}
-
-.upgradeStyle3 {
-    min-width: 270px;
-    max-width: 270px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: clamp(12px, 1.5vh, 19px);
-    margin-bottom: 2px;
-    margin-left: 7px;
-    cursor: pointer;
-}
-
-.upgradeStyle4 {
-    min-width: 270px;
-    max-width: 270px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: clamp(12px, 1.5vh, 19px);
-    margin-bottom: 2px;
-    margin-left: 7px;
-    cursor: pointer;
-}
-
-.upgradeStyle5 {
-    min-width: 270px;
-    max-width: 270px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: clamp(12px, 1.5vh, 19px);
-    margin-bottom: 2px;
-    margin-left: 7px;
-    cursor: pointer;
-}
-
-.upgradeStyle6 {
-    min-width: 270px;
-    max-width: 270px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: clamp(12px, 1.5vh, 19px);
-    margin-bottom: 2px;
-    margin-left: 7px;
-    cursor: pointer;
-}
-
-.upgradeStyle7 {
-    min-width: 270px;
-    max-width: 270px;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: clamp(12px, 1.5vh, 19px);
-    margin-bottom: 2px;
-    margin-left: 7px;
-    cursor: pointer;
-}
+    
+    .upgradeStyle {
+        min-width: 270px;
+        max-width: 270px;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: 2px;
+        margin-left: 7px;
+        cursor: pointer;
+    }
+    
+    .upgradeStyleB {
+        min-width: 272px;
+        max-width: 272px;
+        min-height: 110px;
+        max-height: 110px;
+        background-color: none;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: -13px;
+        margin-left: 7px;
+        cursor: pointer;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .upgradeStyle2 {
+        min-width: 270px;
+        max-width: 270px;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: 2px;
+        margin-left: 7px;
+        cursor: pointer;
+    }
+    
+    .upgradeStyleB2 {
+        min-width: 272px;
+        max-width: 272px;
+        min-height: 110px;
+        max-height: 110px;
+        background-color: none;
+        top: 117px;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        position: absolute;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: -10px;
+        margin-left: 7px;
+        cursor: pointer;
+        z-index: -1;
+    }
+    
+    .upgradeStyle3 {
+        min-width: 270px;
+        max-width: 270px;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: 2px;
+        margin-left: 7px;
+        cursor: pointer;
+    }
+    
+    .upgradeStyleB3 {
+        min-width: 272px;
+        max-width: 272px;
+        min-height: 110px;
+        max-height: 110px;
+        background-color: none;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: -13px;
+        margin-left: 7px;
+        cursor: pointer;
+        position: absolute;
+        z-index: -1;
+        top: 229px;
+    }
+    
+    .upgradeStyle4 {
+        min-width: 270px;
+        max-width: 270px;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: 2px;
+        margin-left: 7px;
+        cursor: pointer;
+    }
+    
+    .upgradeStyleB4 {
+        min-width: 272px;
+        max-width: 272px;
+        min-height: 110px;
+        max-height: 110px;
+        background-color: none;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: -13px;
+        margin-left: 7px;
+        cursor: pointer;
+        position: absolute;
+        z-index: -1;
+        top: 341px;
+    }
+    
+    .upgradeStyle5 {
+        min-width: 270px;
+        max-width: 270px;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: 2px;
+        margin-left: 7px;
+        cursor: pointer;
+    }
+    
+    .upgradeStyleB5 {
+        min-width: 272px;
+        max-width: 272px;
+        min-height: 110px;
+        max-height: 110px;
+        background-color: none;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: -13px;
+        margin-left: 7px;
+        cursor: pointer;
+        position: absolute;
+        z-index: -1;
+        top: 453px;
+    }
+    
+    .upgradeStyle6 {
+        min-width: 270px;
+        max-width: 270px;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: 2px;
+        margin-left: 7px;
+        cursor: pointer;
+    }
+    
+    .upgradeStyleB6 {
+        min-width: 272px;
+        max-width: 272px;
+        min-height: 110px;
+        max-height: 110px;
+        background-color: none;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: -13px;
+        margin-left: 7px;
+        cursor: pointer;
+        position: absolute;
+        z-index: -1;
+        top: 565px;
+    }
+    
+    .upgradeStyle7 {
+        min-width: 270px;
+        max-width: 270px;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: 2px;
+        margin-left: 7px;
+        cursor: pointer;
+    }
+    
+    .upgradeStyleB7 {
+        min-width: 272px;
+        max-width: 272px;
+        min-height: 110px;
+        max-height: 110px;
+        background-color: none;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: clamp(12px, 1.5vh, 19px);
+        margin-bottom: -13px;
+        margin-left: 7px;
+        cursor: pointer;
+        position: absolute;
+        z-index: -1;
+        top: 677px;
+    }

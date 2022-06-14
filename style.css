@@ -157,6 +157,9 @@ Frix63
     bottom: 60px;
     height: 70vh;
     width: 60px;
+    color: white;
+    font-size: 12px;
+    border: solid 1px #000000;
     border-radius: 1vw;
     background-color: rgb(37, 37, 37);
 }
@@ -165,6 +168,7 @@ Frix63
     position: absolute;
     align-items: center;
     justify-content: center;
+    border: solid 1px #000000;
     transform: rotate(180deg);
     display: inline-flex;
     width: 60px;

@@ -24,7 +24,7 @@
     height: 50%;
     width: 50%;
     filter: drop-shadow(0 0 50px white);
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
     animation: shadower 6s ease-in-out normal infinite;
     transition: all 0.2s ease-in-out;
@@ -54,7 +54,7 @@
     height: 51%;
     width: 51%;
     filter: drop-shadow(0 0 50px white);
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
     animation: shadower 6s ease-in-out normal infinite;
     transition: all 0.2s ease-in-out;
