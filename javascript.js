@@ -274,6 +274,13 @@ function renderMoney() {
     document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
     document.getElementById("moneyCounter").innerHTML = Money + " $ ";
     document.getElementById("combo").innerHTML = combo + "x";
+    if ((Money - Math.floor(Money * 10) / 10) === 0) {
+        document.getElementById("moneyCounter").innerHTML = Money + "0 $ ";
+    }
+    if ((AllTimeMoney - Math.floor(AllTimeMoney * 10) / 10) === 0) {
+        document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + "0 All time money";
+        document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + "0 / " + PrestigeGoal;
+    }
     if ((Money - Math.floor(Money)) === 0) {
         document.getElementById("moneyCounter").innerHTML = Money + ".00 $ ";
     }
