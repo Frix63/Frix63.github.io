@@ -8,76 +8,76 @@ start();
 function start() {
 
     if (localStorage.getItem("moneyxd") === "null") {
-        localStorage.setItem("gayi1", 0);
-        localStorage.setItem("gayc1", 10);
-        localStorage.setItem("gayi2", 0);
-        localStorage.setItem("gayc2", 110);
-        localStorage.setItem("gayi3", 0);
-        localStorage.setItem("gayc3", 1200);
-        localStorage.setItem("gayi4", 0);
-        localStorage.setItem("gayc4", 13000);
-        localStorage.setItem("gayi5", 0);
-        localStorage.setItem("gayc5", 140000);
-        localStorage.setItem("gayi6", 0);
-        localStorage.setItem("gayc6", 1500000);
-        localStorage.setItem("gayi7", 0);
-        localStorage.setItem("gayc7", 16000000);
+        localStorage.setItem("upgradei1", 0);
+        localStorage.setItem("upgradec1", 10);
+        localStorage.setItem("upgradei2", 0);
+        localStorage.setItem("upgradec2", 110);
+        localStorage.setItem("upgradei3", 0);
+        localStorage.setItem("upgradec3", 1200);
+        localStorage.setItem("upgradei4", 0);
+        localStorage.setItem("upgradec4", 13000);
+        localStorage.setItem("upgradei5", 0);
+        localStorage.setItem("upgradec5", 140000);
+        localStorage.setItem("upgradei6", 0);
+        localStorage.setItem("upgradec6", 1500000);
+        localStorage.setItem("upgradei7", 0);
+        localStorage.setItem("upgradec7", 16000000);
 
         localStorage.setItem("ATM", 0);
         localStorage.setItem("moneyxd", 0);
     } else if (localStorage.getItem("moneyxd") === "NaN") {
-        localStorage.setItem("gayi1", 0);
-        localStorage.setItem("gayc1", 10);
-        localStorage.setItem("gayi2", 0);
-        localStorage.setItem("gayc2", 110);
-        localStorage.setItem("gayi3", 0);
-        localStorage.setItem("gayc3", 1200);
-        localStorage.setItem("gayi4", 0);
-        localStorage.setItem("gayc4", 13000);
-        localStorage.setItem("gayi5", 0);
-        localStorage.setItem("gayc5", 140000);
-        localStorage.setItem("gayi6", 0);
-        localStorage.setItem("gayc6", 1500000);
-        localStorage.setItem("gayi7", 0);
-        localStorage.setItem("gayc7", 16000000);
+        localStorage.setItem("upgradei1", 0);
+        localStorage.setItem("upgradec1", 10);
+        localStorage.setItem("upgradei2", 0);
+        localStorage.setItem("upgradec2", 110);
+        localStorage.setItem("upgradei3", 0);
+        localStorage.setItem("upgradec3", 1200);
+        localStorage.setItem("upgradei4", 0);
+        localStorage.setItem("upgradec4", 13000);
+        localStorage.setItem("upgradei5", 0);
+        localStorage.setItem("upgradec5", 140000);
+        localStorage.setItem("upgradei6", 0);
+        localStorage.setItem("upgradec6", 1500000);
+        localStorage.setItem("upgradei7", 0);
+        localStorage.setItem("upgradec7", 16000000);
 
         localStorage.setItem("ATM", 0);
         localStorage.setItem("moneyxd", 0);
-    } else if (localStorage.getItem("moneyxd") === "0" && localStorage.getItem("gayi1") === "0") {
-        localStorage.setItem("gayi1", 0);
-        localStorage.setItem("gayc1", 10);
-        localStorage.setItem("gayi2", 0);
-        localStorage.setItem("gayc2", 110);
-        localStorage.setItem("gayi3", 0);
-        localStorage.setItem("gayc3", 1200);
-        localStorage.setItem("gayi4", 0);
-        localStorage.setItem("gayc4", 13000);
-        localStorage.setItem("gayi5", 0);
-        localStorage.setItem("gayc5", 140000);
-        localStorage.setItem("gayi6", 0);
-        localStorage.setItem("gayc6", 1500000);
-        localStorage.setItem("gayi7", 0);
-        localStorage.setItem("gayc7", 16000000);
+    } else if (localStorage.getItem("moneyxd") === "0" && localStorage.getItem("upgradei1") === "0") {
+        localStorage.setItem("upgradei1", 0);
+        localStorage.setItem("upgradec1", 10);
+        localStorage.setItem("upgradei2", 0);
+        localStorage.setItem("upgradec2", 110);
+        localStorage.setItem("upgradei3", 0);
+        localStorage.setItem("upgradec3", 1200);
+        localStorage.setItem("upgradei4", 0);
+        localStorage.setItem("upgradec4", 13000);
+        localStorage.setItem("upgradei5", 0);
+        localStorage.setItem("upgradec5", 140000);
+        localStorage.setItem("upgradei6", 0);
+        localStorage.setItem("upgradec6", 1500000);
+        localStorage.setItem("upgradei7", 0);
+        localStorage.setItem("upgradec7", 16000000);
 
         localStorage.setItem("ATM", 0);
         localStorage.setItem("moneyxd", 0);
-    } else if (localStorage.getItem("gayc1") === "0" || localStorage.getItem("gayc2") === "0" || localStorage.getItem("gayc3") === "0" || localStorage.getItem("gayc4") === "0" || localStorage.getItem("gayc5") === "0" || localStorage.getItem("gayc6") === "0" || localStorage.getItem("gayc7") === "0") {
+    } else if (localStorage.getItem("upgradec1") === "0" || localStorage.getItem("upgradec2") === "0" || localStorage.getItem("upgradec3") === "0" || localStorage.getItem("upgradec4") === "0" || localStorage.getItem("upgradec5") === "0" || localStorage.getItem("upgradec6") === "0" || localStorage.getItem("upgradec7") === "0") {
         localStorage.setItem("moneyxd", Number(localStorage.getItem("moneyxd")));
         localStorage.setItem("ATM", Number(localStorage.getItem("ATM")));
-        localStorage.setItem("gayi1", Number(localStorage.getItem("gayi1")));
-        localStorage.setItem("gayc1", Number(localStorage.getItem("gayc1")));
-        localStorage.setItem("gayi2", Number(localStorage.getItem("gayi2")));
-        localStorage.setItem("gayc2", Number(localStorage.getItem("gayc2")));
-        localStorage.setItem("gayi3", Number(localStorage.getItem("gayi3")));
-        localStorage.setItem("gayc3", Number(localStorage.getItem("gayc3")));
-        localStorage.setItem("gayi4", Number(localStorage.getItem("gayi4")));
-        localStorage.setItem("gayc4", Number(localStorage.getItem("gayc4")));
-        localStorage.setItem("gayi5", Number(localStorage.getItem("gayi5")));
-        localStorage.setItem("gayc5", Number(localStorage.getItem("gayc5")));
-        localStorage.setItem("gayi6", Number(localStorage.getItem("gayi6")));
-        localStorage.setItem("gayc6", Number(localStorage.getItem("gayc6")));
-        localStorage.setItem("gayi7", Number(localStorage.getItem("gayi7")));
-        localStorage.setItem("gayc7", Number(localStorage.getItem("gayc7")));
+        localStorage.setItem("upgradei1", Number(localStorage.getItem("upgradei1")));
+        localStorage.setItem("upgradec1", Number(localStorage.getItem("upgradec1")));
+        localStorage.setItem("upgradei2", Number(localStorage.getItem("upgradei2")));
+        localStorage.setItem("upgradec2", Number(localStorage.getItem("upgradec2")));
+        localStorage.setItem("upgradei3", Number(localStorage.getItem("upgradei3")));
+        localStorage.setItem("upgradec3", Number(localStorage.getItem("upgradec3")));
+        localStorage.setItem("upgradei4", Number(localStorage.getItem("upgradei4")));
+        localStorage.setItem("upgradec4", Number(localStorage.getItem("upgradec4")));
+        localStorage.setItem("upgradei5", Number(localStorage.getItem("upgradei5")));
+        localStorage.setItem("upgradec5", Number(localStorage.getItem("upgradec5")));
+        localStorage.setItem("upgradei6", Number(localStorage.getItem("upgradei6")));
+        localStorage.setItem("upgradec6", Number(localStorage.getItem("upgradec6")));
+        localStorage.setItem("upgradei7", Number(localStorage.getItem("upgradei7")));
+        localStorage.setItem("upgradec7", Number(localStorage.getItem("upgradec7")));
         document.location.reload(true);
     } else {
         Money = 0;
@@ -98,39 +98,39 @@ function start() {
         AllTimeMoney = 0;
         localStorage.setItem("moneyxd", Number(localStorage.getItem("moneyxd")));
         localStorage.setItem("ATM", Number(localStorage.getItem("ATM")));
-        localStorage.setItem("gayi1", Number(localStorage.getItem("gayi1")));
-        localStorage.setItem("gayc1", Number(localStorage.getItem("gayc1")));
-        localStorage.setItem("gayi2", Number(localStorage.getItem("gayi2")));
-        localStorage.setItem("gayc2", Number(localStorage.getItem("gayc2")));
-        localStorage.setItem("gayi3", Number(localStorage.getItem("gayi3")));
-        localStorage.setItem("gayc3", Number(localStorage.getItem("gayc3")));
-        localStorage.setItem("gayi4", Number(localStorage.getItem("gayi4")));
-        localStorage.setItem("gayc4", Number(localStorage.getItem("gayc4")));
-        localStorage.setItem("gayi5", Number(localStorage.getItem("gayi5")));
-        localStorage.setItem("gayc5", Number(localStorage.getItem("gayc5")));
-        localStorage.setItem("gayi6", Number(localStorage.getItem("gayi6")));
-        localStorage.setItem("gayc6", Number(localStorage.getItem("gayc6")));
-        localStorage.setItem("gayi7", Number(localStorage.getItem("gayi7")));
-        localStorage.setItem("gayc7", Number(localStorage.getItem("gayc7")));
+        localStorage.setItem("upgradei1", Number(localStorage.getItem("upgradei1")));
+        localStorage.setItem("upgradec1", Number(localStorage.getItem("upgradec1")));
+        localStorage.setItem("upgradei2", Number(localStorage.getItem("upgradei2")));
+        localStorage.setItem("upgradec2", Number(localStorage.getItem("upgradec2")));
+        localStorage.setItem("upgradei3", Number(localStorage.getItem("upgradei3")));
+        localStorage.setItem("upgradec3", Number(localStorage.getItem("upgradec3")));
+        localStorage.setItem("upgradei4", Number(localStorage.getItem("upgradei4")));
+        localStorage.setItem("upgradec4", Number(localStorage.getItem("upgradec4")));
+        localStorage.setItem("upgradei5", Number(localStorage.getItem("upgradei5")));
+        localStorage.setItem("upgradec5", Number(localStorage.getItem("upgradec5")));
+        localStorage.setItem("upgradei6", Number(localStorage.getItem("upgradei6")));
+        localStorage.setItem("upgradec6", Number(localStorage.getItem("upgradec6")));
+        localStorage.setItem("upgradei7", Number(localStorage.getItem("upgradei7")));
+        localStorage.setItem("upgradec7", Number(localStorage.getItem("upgradec7")));
     }
     Money = Number(localStorage.getItem("moneyxd"));
     AllTimeMoney = Number(localStorage.getItem("ATM"));
-    Upgradeint = Number(localStorage.getItem("gayi1"));
-    Upgradecost = Number(localStorage.getItem("gayc1"));
-    Upgradeint2 = Number(localStorage.getItem("gayi2"));
-    Upgradecost2 = Number(localStorage.getItem("gayc2"));
-    Upgradeint3 = Number(localStorage.getItem("gayi3"));
-    Upgradecost3 = Number(localStorage.getItem("gayc3"));
-    Upgradeint4 = Number(localStorage.getItem("gayi4"));
-    Upgradecost4 = Number(localStorage.getItem("gayc4"));
-    Upgradeint5 = Number(localStorage.getItem("gayi5"));
-    Upgradecost5 = Number(localStorage.getItem("gayc5"));
-    Upgradeint6 = Number(localStorage.getItem("gayi6"));
-    Upgradecost6 = Number(localStorage.getItem("gayc6"));
-    Upgradeint7 = Number(localStorage.getItem("gayi7"));
-    Upgradecost7 = Number(localStorage.getItem("gayc7"));
+    Upgradeint = Number(localStorage.getItem("upgradei1"));
+    Upgradecost = Number(localStorage.getItem("upgradec1"));
+    Upgradeint2 = Number(localStorage.getItem("upgradei2"));
+    Upgradecost2 = Number(localStorage.getItem("upgradec2"));
+    Upgradeint3 = Number(localStorage.getItem("upgradei3"));
+    Upgradecost3 = Number(localStorage.getItem("upgradec3"));
+    Upgradeint4 = Number(localStorage.getItem("upgradei4"));
+    Upgradecost4 = Number(localStorage.getItem("upgradec4"));
+    Upgradeint5 = Number(localStorage.getItem("upgradei5"));
+    Upgradecost5 = Number(localStorage.getItem("upgradec5"));
+    Upgradeint6 = Number(localStorage.getItem("upgradei6"));
+    Upgradecost6 = Number(localStorage.getItem("upgradec6"));
+    Upgradeint7 = Number(localStorage.getItem("upgradei7"));
+    Upgradecost7 = Number(localStorage.getItem("upgradec7"));
 }
-if (localStorage.getItem("gayc1") === "0") {
+if (localStorage.getItem("upgradec1") === "0") {
     document.location.reload(true);
 }
 let Cps = 0;
@@ -244,32 +244,32 @@ function ComboInterval() {
 function saveData() {
     localStorage.setItem("ATM", AllTimeMoney);
     localStorage.setItem("moneyxd", Money)
-    localStorage.setItem("gayi1", Upgradeint);
-    localStorage.setItem("gayc1", Upgradecost);
-    localStorage.setItem("gayi2", Upgradeint2);
-    localStorage.setItem("gayc2", Upgradecost2);
-    localStorage.setItem("gayi3", Upgradeint3);
-    localStorage.setItem("gayc3", Upgradecost3);
-    localStorage.setItem("gayi4", Upgradeint4);
-    localStorage.setItem("gayic4", Upgradecost4);
-    localStorage.setItem("gayi5", Upgradeint5);
-    localStorage.setItem("gayc5", Upgradecost5);
-    localStorage.setItem("gayi6", Upgradeint6);
-    localStorage.setItem("gayc6", Upgradecost6);
-    localStorage.setItem("gayi7", Upgradeint7);
-    localStorage.setItem("gayc7", Upgradecost7);
+    localStorage.setItem("upgradei1", Upgradeint);
+    localStorage.setItem("upgradec1", Upgradecost);
+    localStorage.setItem("upgradei2", Upgradeint2);
+    localStorage.setItem("upgradec2", Upgradecost2);
+    localStorage.setItem("upgradei3", Upgradeint3);
+    localStorage.setItem("upgradec3", Upgradecost3);
+    localStorage.setItem("upgradei4", Upgradeint4);
+    localStorage.setItem("upgradeic4", Upgradecost4);
+    localStorage.setItem("upgradei5", Upgradeint5);
+    localStorage.setItem("upgradec5", Upgradecost5);
+    localStorage.setItem("upgradei6", Upgradeint6);
+    localStorage.setItem("upgradec6", Upgradecost6);
+    localStorage.setItem("upgradei7", Upgradeint7);
+    localStorage.setItem("upgradec7", Upgradecost7);
 }
 
 function renderMoney() {
     AllTimeMoney = Math.round(AllTimeMoney * 100) / 100;
     Money = Math.round(Money * 100) / 100;
-    document.getElementById("upgrade1").innerHTML = "‎ Gay upgrade + 0.1 cps<br>‎ [cost " + Upgradecost + "]<br> ‎ Owned [" + Upgradeint + "] [" + Math.round(Upgradeint * 0.1 * 10) / 10 + "cps]";
-    document.getElementById("upgrade2").innerHTML = "‎ Gay upgrade2 + 1 cps<br>‎ [cost " + Upgradecost2 + "]<br> ‎ Owned [" + Upgradeint2 + "] [" + Upgradeint2 * 1 + "cps]";
-    document.getElementById("upgrade3").innerHTML = "‎ Gay upgrade3 + 6 cps<br>‎ [cost " + Upgradecost3 + "]<br> ‎ Owned [" + Upgradeint3 + "] [" + Upgradeint3 * 6 + "cps]";
-    document.getElementById("upgrade4").innerHTML = "‎ Gay upgrade4 + 33 cps<br>‎ [cost " + Upgradecost4 + "]<br> ‎ Owned [" + Upgradeint4 + "] [" + Upgradeint4 * 33 + "cps]";
-    document.getElementById("upgrade5").innerHTML = "‎ Gay upgrade5 + 182 cps<br>‎ [cost " + Upgradecost5 + "]<br> ‎ Owned [" + Upgradeint5 + "] [" + Upgradeint5 * 182 + "cps]";
-    document.getElementById("upgrade6").innerHTML = "‎ Gay upgrade6 + 1001 cps<br>‎ [cost " + Upgradecost6 + "]<br> ‎ Owned [" + Upgradeint6 + "] [" + Upgradeint5 * 1001 + "cps]";
-    document.getElementById("upgrade7").innerHTML = "‎ Gay upgrade7 + 5505 cps<br>‎ [cost " + Upgradecost7 + "]<br> ‎ Owned [" + Upgradeint7 + "] [" + Upgradeint7 * 5505 + "cps]";
+    document.getElementById("upgrade1").innerHTML = "‎ upgrade + 0.1 cps<br>‎ [cost " + Upgradecost + "]<br> ‎ Owned [" + Upgradeint + "] [" + Math.round(Upgradeint * 0.1 * 10) / 10 + "cps]";
+    document.getElementById("upgrade2").innerHTML = "‎ upgrade2 + 1 cps<br>‎ [cost " + Upgradecost2 + "]<br> ‎ Owned [" + Upgradeint2 + "] [" + Upgradeint2 * 1 + "cps]";
+    document.getElementById("upgrade3").innerHTML = "‎ upgrade3 + 6 cps<br>‎ [cost " + Upgradecost3 + "]<br> ‎ Owned [" + Upgradeint3 + "] [" + Upgradeint3 * 6 + "cps]";
+    document.getElementById("upgrade4").innerHTML = "‎ upgrade4 + 33 cps<br>‎ [cost " + Upgradecost4 + "]<br> ‎ Owned [" + Upgradeint4 + "] [" + Upgradeint4 * 33 + "cps]";
+    document.getElementById("upgrade5").innerHTML = "‎ upgrade5 + 182 cps<br>‎ [cost " + Upgradecost5 + "]<br> ‎ Owned [" + Upgradeint5 + "] [" + Upgradeint5 * 182 + "cps]";
+    document.getElementById("upgrade6").innerHTML = "‎ upgrade6 + 1001 cps<br>‎ [cost " + Upgradecost6 + "]<br> ‎ Owned [" + Upgradeint6 + "] [" + Upgradeint5 * 1001 + "cps]";
+    document.getElementById("upgrade7").innerHTML = "‎ upgrade7 + 5505 cps<br>‎ [cost " + Upgradecost7 + "]<br> ‎ Owned [" + Upgradeint7 + "] [" + Upgradeint7 * 5505 + "cps]";
     document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
     document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
     document.getElementById("moneyCounter").innerHTML = Money + " $ ";
@@ -326,20 +326,20 @@ function clearData() {
     let clearDataText = "Press OK button to delete all your progress!\nPress Cancel to cancel progress dump.";
     if (confirm(clearDataText) == true) {
         localStorage.setItem("moneyxd", 0);
-        localStorage.setItem("gayi1", 0);
-        localStorage.setItem("gayc1", 10);
-        localStorage.setItem("gayi2", 0);
-        localStorage.setItem("gayc2", 110);
-        localStorage.setItem("gayi3", 0);
-        localStorage.setItem("gayc3", 1200);
-        localStorage.setItem("gayi4", 0);
-        localStorage.setItem("gayc4", 13000);
-        localStorage.setItem("gayi5", 0);
-        localStorage.setItem("gayc5", 140000);
-        localStorage.setItem("gayi6", 0);
-        localStorage.setItem("gayc6", 1500000);
-        localStorage.setItem("gayi7", 0);
-        localStorage.setItem("gayc7", 16000000);
+        localStorage.setItem("upgradei1", 0);
+        localStorage.setItem("upgradec1", 10);
+        localStorage.setItem("upgradei2", 0);
+        localStorage.setItem("upgradec2", 110);
+        localStorage.setItem("upgradei3", 0);
+        localStorage.setItem("upgradec3", 1200);
+        localStorage.setItem("upgradei4", 0);
+        localStorage.setItem("upgradec4", 13000);
+        localStorage.setItem("upgradei5", 0);
+        localStorage.setItem("upgradec5", 140000);
+        localStorage.setItem("upgradei6", 0);
+        localStorage.setItem("upgradec6", 1500000);
+        localStorage.setItem("upgradei7", 0);
+        localStorage.setItem("upgradec7", 16000000);
         Money = 0;
         AllTimeMoney = 0;
         Upgradeint = 0;
@@ -387,7 +387,7 @@ function RawCPSRender() {
 }
 
 
-//Gay upgrade 1
+//upgrade 1
 function Upgrade() {
     if (Money >= Upgradecost) {
         Money = Money - Upgradecost;
@@ -398,7 +398,7 @@ function Upgrade() {
     }
 }
 
-//Gay upgrade 2
+//upgrade 2
 function Upgrade2() {
     if (Money >= Upgradecost2) {
         Money = Money - Upgradecost2;
@@ -409,7 +409,7 @@ function Upgrade2() {
     }
 }
 
-//Gay upgrade 3
+//upgrade 3
 function Upgrade3() {
     if (Money >= Upgradecost3) {
         Money = Money - Upgradecost3;
