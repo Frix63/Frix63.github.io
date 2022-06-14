@@ -300,7 +300,7 @@ function tlacitko() {
 }
 
 function AutoClicksPerSecond() {
-    Cps = (Upgradeint2 * 0.01) + (Upgradeint2 * 1) + (Upgradeint3 * 6) + (Upgradeint4 * 33) + (Upgradeint5 * 182) + (Upgradeint5 * 1001) + (Upgradeint7 * 5505);
+    Cps = (Upgradeint * 0.01) + (Upgradeint2 * 1) + (Upgradeint3 * 6) + (Upgradeint4 * 33) + (Upgradeint5 * 182) + (Upgradeint5 * 1001) + (Upgradeint7 * 5505);
     document.getElementById("CPSTextDisplay").innerHTML = Cps + " Generated/s";
 }
 
