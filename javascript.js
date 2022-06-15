@@ -374,7 +374,7 @@ function PrestigeInterval() {
         document.getElementById("ATMBarID").innerHTML = Math.round((perc + Number.EPSILON) * 100) / 100 + "%";
     } else {
         PrestigeMultiplier = PrestigeMultiplier * 2;
-        PrestigeGoal = PrestigeGoal * 4;
+        PrestigeGoal = PrestigeGoal * 3;
         PrestigeScore = PrestigeScore + 1;
     }
 }
