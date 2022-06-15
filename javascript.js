@@ -368,7 +368,40 @@ function clearData() {
     }
 }
 
-
+function HardReset() {
+    localStorage.setItem("moneyxd", 0);
+    localStorage.setItem("upgradei1", 0);
+    localStorage.setItem("upgradec1", 10);
+    localStorage.setItem("upgradei2", 0);
+    localStorage.setItem("upgradec2", 110);
+    localStorage.setItem("upgradei3", 0);
+    localStorage.setItem("upgradec3", 1200);
+    localStorage.setItem("upgradei4", 0);
+    localStorage.setItem("upgradec4", 13000);
+    localStorage.setItem("upgradei5", 0);
+    localStorage.setItem("upgradec5", 140000);
+    localStorage.setItem("upgradei6", 0);
+    localStorage.setItem("upgradec6", 1500000);
+    localStorage.setItem("upgradei7", 0);
+    localStorage.setItem("upgradec7", 16000000);
+    Money = 0;
+    AllTimeMoney = 0;
+    Upgradeint = 0;
+    Upgradecost = 10;
+    Upgradeint2 = 0;
+    Upgradecost2 = 110;
+    Upgradeint3 = 0;
+    Upgradecost3 = 1200;
+    Upgradeint4 = 0;
+    Upgradecost4 = 13000;
+    Upgradeint5 = 0;
+    Upgradecost5 = 140000;
+    Upgradeint6 = 0;
+    Upgradecost6 = 1500000;
+    Upgradeint7 = 0;
+    Upgradecost7 = 16000000;
+    document.location.reload(true);
+}
 
 
 function PrestigeInterval() {
@@ -394,7 +427,7 @@ function RawCPSRender() {
     document.getElementById("MPS").innerHTML = Math.round(MPSInt) + " Money click/s";
 
     if (RawCPSDisplayedRender >= 25) {
-        Money = 0;
+        HardReset();
     }
 }
 
@@ -403,11 +436,7 @@ function AntiCheat() {
     TestComplete = (Test1 + Test2 + Test3 + Test4) - (4 * Test4);
     TestComplete = Math.abs(TestComplete);
     if (TestComplete <= 3) {
-        Money = 0;
-        Test1 = RawCPSDisplayedRender;
-        setTimeout(AntiCheat, 25000);
-        setTimeout(AntiCheat2, 15000);
-        setTimeout(AntiCheat3, 20000);
+        HardReset();
     }
 }
 
