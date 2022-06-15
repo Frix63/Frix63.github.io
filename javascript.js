@@ -386,6 +386,10 @@ function RawCPSRender() {
     RawCPSInt = 0;
     document.getElementById("RawCPSID").innerHTML = Math.round(RawCPSDisplayedRender) + " RawCPS";
     document.getElementById("MPS").innerHTML = Math.round(MPSInt) + " Money click /s";
+
+    if (RawCPSDisplayedRender >= 25) {
+        Money = 0;
+    }
 }
 
 
