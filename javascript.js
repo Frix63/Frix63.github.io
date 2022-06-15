@@ -261,6 +261,10 @@ function saveData() {
 }
 
 function renderMoney() {
+    if (combo === 40) {
+        Test1 = RawCPSDisplayedRender;
+        setTimeout(AntiCheat, 30000)
+    }
     AllTimeMoney = Math.round(AllTimeMoney * 100) / 100;
     Money = Math.round(Money * 100) / 100;
     document.getElementById("upgrade1").innerHTML = "‎ Active student + 0.1 cps<br>‎ [cost " + Upgradecost + "]<br> ‎ Owned [" + Upgradeint + "] [" + Math.round(Upgradeint * 0.1 * 10) / 10 + " money/s]";
@@ -392,6 +396,12 @@ function RawCPSRender() {
     }
 }
 
+function AntiCheat() {
+    Test2 = RawCPSDisplayedRender;
+    if (Test1 === Test2) {
+        Money = 0;
+    }
+}
 
 //upgrade 1
 function Upgrade() {
@@ -489,6 +499,7 @@ var followCursor = (
             }
         };
     }());
+
 
 window.onload = function() {
     followCursor.init();
