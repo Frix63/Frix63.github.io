@@ -264,6 +264,8 @@ function renderMoney() {
     if (combo === 40) {
         Test1 = RawCPSDisplayedRender;
         setTimeout(AntiCheat, 30000)
+        setTimeout(AntiCheat2, 25000)
+        setTimeout(AntiCheat3, 20000)
     }
     AllTimeMoney = Math.round(AllTimeMoney * 100) / 100;
     Money = Math.round(Money * 100) / 100;
@@ -398,9 +400,20 @@ function RawCPSRender() {
 
 function AntiCheat() {
     Test2 = RawCPSDisplayedRender;
-    if (Test1 === Test2) {
+    TestComplete = (Test1 + Test2 + Test3 + Test4) - (4 * Test4);
+    TestComplete = Math.abs(TestComplete);
+    if (TestComplete <= 3) {
         Money = 0;
     }
+}
+
+function AntiCheat2() {
+    Test3 = RawCPSDisplayedRender;
+}
+
+
+function AntiCheat3() {
+    Test4 = RawCPSDisplayedRender;
 }
 
 //upgrade 1
