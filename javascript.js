@@ -564,6 +564,7 @@ window.onload = function() {
 }
 
 function SabloChanger() {
+    document.getElementById("PrestigeScoreDisplay").innerHTML = PrestigeScore + ". Prestige level";
     switch (PrestigeScore) {
         case 1:
             document.getElementById("SImage").src = "Sablos/sabloclick.png";
