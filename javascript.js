@@ -432,7 +432,7 @@ function RawCPSRender() {
     document.getElementById("MPS").innerHTML = Math.round(MPSInt) + " Money click/s";
 
     if (RawCPSDisplayedRender >= 25) {
-        HardReset();
+        Money = 0;
     }
 }
 
