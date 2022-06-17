@@ -261,11 +261,16 @@ function saveData() {
 }
 
 function renderMoney() {
+    if (combo === 0) {
+        clearTimeout(AntiCheat);
+        clearTimeout(AntiCheat2);
+        clearTimeout(AntiCheat3);
+    }
     if (combo === 40) {
         Test1 = RawCPSDisplayedRender;
-        setTimeout(AntiCheat, 25000);
-        setTimeout(AntiCheat2, 15000);
-        setTimeout(AntiCheat3, 20000);
+        setTimeout(AntiCheat, 225000);
+        setTimeout(AntiCheat2, 185000);
+        setTimeout(AntiCheat3, 80000);
     }
     AllTimeMoney = Math.round(AllTimeMoney * 100) / 100;
     Money = Math.round(Money * 100) / 100;
@@ -435,8 +440,13 @@ function AntiCheat() {
     Test2 = RawCPSDisplayedRender;
     TestComplete = (Test1 + Test2 + Test3 + Test4) - (4 * Test4);
     TestComplete = Math.abs(TestComplete);
-    if (TestComplete <= 3) {
+    if (TestComplete <= 1) {
         HardReset();
+    } else {
+        Test1 = RawCPSDisplayedRender;
+        setTimeout(AntiCheat, 825000);
+        setTimeout(AntiCheat2, 185000);
+        setTimeout(AntiCheat3, 80000);
     }
 }
 
