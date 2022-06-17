@@ -451,7 +451,7 @@ function anticheatASK() {
     askn2 = Math.floor(Math.random() * (100));
     asknsumm = askn1 + askn2;
     clearInterval(anticheatdecrease);
-    asknsum = prompt('Are you still there?\n' + askn1 + '+' + askn2 + '=' + ' x ' + 'What is the x?', "");
+    asknsum = prompt('Are you still there?\n' + askn1 + '+' + askn2 + '=' + ' x ' + '\nWhat is the x?', "");
     if (asknsum == asknsumm) {
         alert('Correct answer\nPlease enjoy playin SábloClicker');
     } else {
