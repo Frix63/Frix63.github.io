@@ -261,17 +261,6 @@ function saveData() {
 }
 
 function renderMoney() {
-    if (combo === 0) {
-        clearTimeout(AntiCheat);
-        clearTimeout(AntiCheat2);
-        clearTimeout(AntiCheat3);
-    }
-    if (combo === 40) {
-        Test1 = RawCPSDisplayedRender;
-        setTimeout(AntiCheat, 225000);
-        setTimeout(AntiCheat2, 185000);
-        setTimeout(AntiCheat3, 80000);
-    }
     AllTimeMoney = Math.round(AllTimeMoney * 100) / 100;
     Money = Math.round(Money * 100) / 100;
     document.getElementById("upgrade1").innerHTML = "‎ Active student + 0.1 cps<br>‎ [cost " + Upgradecost + "]<br> ‎ Owned [" + Upgradeint + "] [" + Math.round(Upgradeint * 0.1 * 10) / 10 + " money/s]";
@@ -436,28 +425,40 @@ function RawCPSRender() {
     }
 }
 
-function AntiCheat() {
-    Test2 = RawCPSDisplayedRender;
-    TestComplete = (Test1 + Test2 + Test3 + Test4) - (4 * Test4);
-    TestComplete = Math.abs(TestComplete);
-    if (TestComplete <= 1) {
-        HardReset();
-    } else {
-        Test1 = RawCPSDisplayedRender;
-        setTimeout(AntiCheat, 825000);
-        setTimeout(AntiCheat2, 185000);
-        setTimeout(AntiCheat3, 80000);
+AskTimer = 1;
+
+function anticheatmove() {
+    Anticheattime = 120;
+    if (AskTimer === 1) {
+        AskTimer = 0;
+        setInterval(anticheatdecrease, 1000);
     }
 }
 
-function AntiCheat2() {
-    Test3 = RawCPSDisplayedRender;
+function anticheatleave() {
+    clearInterval(anticheatdecrease);
 }
 
-
-function AntiCheat3() {
-    Test4 = RawCPSDisplayedRender;
+function anticheatdecrease() {
+    Anticheattime = Anticheattime - 1;
+    if (Anticheattime === 0) {
+        anticheatASK();
+    }
 }
+
+function anticheatASK() {
+    askn1 = Math.floor(Math.random() * (100));
+    askn2 = Math.floor(Math.random() * (100));
+    asknsumm = askn1 + askn2;
+    clearInterval(anticheatdecrease);
+    asknsum = prompt('Are you still there?\n' + askn1 + '+' + askn2 + '=' + ' x ' + 'What is the x?', "");
+    if (asknsum == asknsumm) {
+        alert('Correct answer\nPlease enjoy playin SábloClicker');
+    } else {
+        anticheatASK();
+    }
+}
+
 
 //upgrade 1
 function Upgrade() {
