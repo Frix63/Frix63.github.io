@@ -144,22 +144,62 @@ let PrestigeScore = 1;
 comboB = false;
 RawCPSRender();
 setInterval(RawCPSRender, 1000)
-setInterval(PrestigeInterval, 0);
-setInterval(Upgradecps, 100)
-setInterval(renderMoney, 0)
-setInterval(saveData, 500)
-setInterval(AutoClicksPerSecond, 0)
-setInterval(ComboMathInterval, 0);
-setInterval(ComboInterval, 0);
-setInterval(SabloChanger, 0);
+setInterval(Upgradecps, 100);
+setInterval(saveData, 500);
+setInterval(RepeatPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMathIntervalComboIntervalSabloChanger, 0);
 
-function comboreset() {
-    if (RawCPSDisplayedRender === 0) {
-        combo = 0;
+function RepeatPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMathIntervalComboIntervalSabloChanger() {
+
+
+    /* PrestigeInterval */
+    perc = (AllTimeMoney / PrestigeGoal) * 100;
+    document.getElementById("PPDisplay").innerHTML = "Clicks " + PrestigeMultiplier + "x";
+    if (PrestigeGoal >= AllTimeMoney) {
+        Math.round((perc + Number.EPSILON) * 100) / 100
+        document.getElementById("ATMBarID").style.height = 5 + perc + "%";
+        document.getElementById("ATMBarID").innerHTML = Math.round((perc + Number.EPSILON) * 100) / 100 + "%";
+    } else {
+        PrestigeMultiplier = PrestigeMultiplier * 2;
+        PrestigeGoal = PrestigeGoal * 3;
+        PrestigeScore = PrestigeScore + 1;
     }
-}
 
-function ComboMathInterval() {
+    /* RenderMoney */
+    AllTimeMoney = Math.round(AllTimeMoney * 100) / 100;
+    Money = Math.round(Money * 100) / 100;
+    document.getElementById("upgrade1").innerHTML = "‎ Active student + 0.1 cps<br>‎ [cost " + Upgradecost + "]<br> ‎ Owned [" + Upgradeint + "] [" + Math.round(Upgradeint * 0.1 * 10) / 10 + " money/s]";
+    document.getElementById("upgrade2").innerHTML = "‎ EU Grants + 1 cps<br>‎ [cost " + Upgradecost2 + "]<br> ‎ Owned [" + Upgradeint2 + "] [" + Upgradeint2 * 1 + " money/s]";
+    document.getElementById("upgrade3").innerHTML = "‎ Chem teacher + 6 cps<br>‎ [cost " + Upgradecost3 + "]<br> ‎ Owned [" + Upgradeint3 + "] [" + Upgradeint3 * 6 + " money/s]";
+    document.getElementById("upgrade4").innerHTML = "‎ 12min run + 33 cps<br>‎ [cost " + Upgradecost4 + "]<br> ‎ Owned [" + Upgradeint4 + "] [" + Upgradeint4 * 33 + " money/s]";
+    document.getElementById("upgrade5").innerHTML = "‎ Inflatable boat + 182 cps<br>‎ [cost " + Upgradecost5 + "]<br> ‎ Owned [" + Upgradeint5 + "] [" + Upgradeint5 * 182 + " money/s]";
+    document.getElementById("upgrade6").innerHTML = "‎ Reality++ ‎ + 1001 cps<br>‎ [cost " + Upgradecost6 + "]<br> ‎ Owned [" + Upgradeint6 + "] [" + Upgradeint5 * 1001 + " money/s]";
+    document.getElementById("upgrade7").innerHTML = "‎ Moodle + 5505 cps<br>‎ [cost " + Upgradecost7 + "]<br> ‎ Owned [" + Upgradeint7 + "] [" + Upgradeint7 * 5505 + " money/s]";
+    document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
+    document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
+    document.getElementById("moneyCounter").innerHTML = Money + " $ ";
+    document.getElementById("combo").innerHTML = combo + "x";
+    if ((Money - Math.floor(Money * 10) / 10) === 0) {
+        document.getElementById("moneyCounter").innerHTML = Money + "0 $ ";
+    }
+    if ((AllTimeMoney - Math.floor(AllTimeMoney * 10) / 10) === 0) {
+        document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + "0 All time money";
+        document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + "0 / " + PrestigeGoal;
+    }
+    if ((Money - Math.floor(Money)) === 0) {
+        document.getElementById("moneyCounter").innerHTML = Money + ".00 $ ";
+    }
+    if ((AllTimeMoney - Math.floor(AllTimeMoney)) === 0) {
+        document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + ".00 All time money";
+        document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + ".00 / " + PrestigeGoal;
+    }
+
+
+    /* AutoClicksPerSecond */
+    Cps = (Upgradeint * 0.01) + (Upgradeint2 * 1) + (Upgradeint3 * 6) + (Upgradeint4 * 33) + (Upgradeint5 * 182) + (Upgradeint5 * 1001) + (Upgradeint7 * 5505);
+    document.getElementById("CPSTextDisplay").innerHTML = Cps + " Generated/s";
+
+
+    /* ComboMathInterval */
     if (combo > 0) {
         document.getElementById("combo").style.display = "block";
     } else {
@@ -233,13 +273,63 @@ function ComboMathInterval() {
         document.getElementById('combo').style.color = '#ff0000';
         document.getElementById('combo').style.filter = 'drop-shadow(0 0 10px #ff0000)';
     }
-}
 
-function ComboInterval() {
+
+    /* ComboInterval */
     if (combo >= 1) {
         setTimeout(comboreset, 1000)
     }
+
+
+    /* SabloChanger */
+    document.getElementById("PrestigeScoreDisplay").innerHTML = PrestigeScore + ". Prestige level";
+    switch (PrestigeScore) {
+        case 1:
+            document.getElementById("SImage").src = "Sablos/sabloclick.png";
+            document.getElementById("BackgroundIMG").src = "Background/Basement.jpg";
+            break;
+        case 2:
+            document.getElementById("SImage").src = "Sablos/SabloRee.png";
+            document.getElementById("BackgroundIMG").src = "Background/SHell.jpg";
+            break;
+        case 3:
+            document.getElementById("SImage").src = "Sablos/RetroSablo.png";
+            document.getElementById("BackgroundIMG").src = "Background/SRetB.jpg";
+            break;
+        case 4:
+            document.getElementById("SImage").src = "Sablos/SabloDrip.png";
+            document.getElementById("BackgroundIMG").src = "Background/SDripB.jpg";
+            break;
+        case 5:
+            document.getElementById("SImage").src = "Sablos/Xiablo.png";
+            document.getElementById("BackgroundIMG").src = "Background/XiabloB.jpg";
+            break;
+        case 6:
+            document.getElementById("SImage").src = "Sablos/SabloDripWT.png";
+            document.getElementById("BackgroundIMG").src = "Background/SabloCar.jpg";
+            break;
+        case 7:
+            document.getElementById("SImage").src = "Sablos/SabloGun.png";
+            document.getElementById("BackgroundIMG").src = "Background/SabloGunB.jpg";
+            break;
+        case 8:
+            document.getElementById("SImage").src = "Sablos/SabloPenis.png";
+            document.getElementById("BackgroundIMG").src = "Background/Kachlicky.jpg";
+            break;
+        default:
+            document.getElementById("SImage").src = "Sablos/SabloDrip.png";
+            document.getElementById("BackgroundIMG").src = "Background/SDripB.jpg";
+            break;
+    }
 }
+
+function comboreset() {
+    if (RawCPSDisplayedRender === 0) {
+        combo = 0;
+    }
+}
+
+
 
 function saveData() {
     localStorage.setItem("ATM", AllTimeMoney);
@@ -260,35 +350,6 @@ function saveData() {
     localStorage.setItem("upgradec7", Upgradecost7);
 }
 
-function renderMoney() {
-    AllTimeMoney = Math.round(AllTimeMoney * 100) / 100;
-    Money = Math.round(Money * 100) / 100;
-    document.getElementById("upgrade1").innerHTML = "‎ Active student + 0.1 cps<br>‎ [cost " + Upgradecost + "]<br> ‎ Owned [" + Upgradeint + "] [" + Math.round(Upgradeint * 0.1 * 10) / 10 + " money/s]";
-    document.getElementById("upgrade2").innerHTML = "‎ EU Grants + 1 cps<br>‎ [cost " + Upgradecost2 + "]<br> ‎ Owned [" + Upgradeint2 + "] [" + Upgradeint2 * 1 + " money/s]";
-    document.getElementById("upgrade3").innerHTML = "‎ Chem teacher + 6 cps<br>‎ [cost " + Upgradecost3 + "]<br> ‎ Owned [" + Upgradeint3 + "] [" + Upgradeint3 * 6 + " money/s]";
-    document.getElementById("upgrade4").innerHTML = "‎ 12min run + 33 cps<br>‎ [cost " + Upgradecost4 + "]<br> ‎ Owned [" + Upgradeint4 + "] [" + Upgradeint4 * 33 + " money/s]";
-    document.getElementById("upgrade5").innerHTML = "‎ Inflatable boat + 182 cps<br>‎ [cost " + Upgradecost5 + "]<br> ‎ Owned [" + Upgradeint5 + "] [" + Upgradeint5 * 182 + " money/s]";
-    document.getElementById("upgrade6").innerHTML = "‎ Reality++ ‎ + 1001 cps<br>‎ [cost " + Upgradecost6 + "]<br> ‎ Owned [" + Upgradeint6 + "] [" + Upgradeint5 * 1001 + " money/s]";
-    document.getElementById("upgrade7").innerHTML = "‎ Moodle + 5505 cps<br>‎ [cost " + Upgradecost7 + "]<br> ‎ Owned [" + Upgradeint7 + "] [" + Upgradeint7 * 5505 + " money/s]";
-    document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
-    document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
-    document.getElementById("moneyCounter").innerHTML = Money + " $ ";
-    document.getElementById("combo").innerHTML = combo + "x";
-    if ((Money - Math.floor(Money * 10) / 10) === 0) {
-        document.getElementById("moneyCounter").innerHTML = Money + "0 $ ";
-    }
-    if ((AllTimeMoney - Math.floor(AllTimeMoney * 10) / 10) === 0) {
-        document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + "0 All time money";
-        document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + "0 / " + PrestigeGoal;
-    }
-    if ((Money - Math.floor(Money)) === 0) {
-        document.getElementById("moneyCounter").innerHTML = Money + ".00 $ ";
-    }
-    if ((AllTimeMoney - Math.floor(AllTimeMoney)) === 0) {
-        document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + ".00 All time money";
-        document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + ".00 / " + PrestigeGoal;
-    }
-}
 
 function tlacitko() {
     combo = combo + 1;
@@ -298,12 +359,6 @@ function tlacitko() {
     AllTimeMoney = AllTimeMoney + 1 * PrestigeMultiplier;
     RawCPSInt = RawCPSInt + 1;
 }
-
-function AutoClicksPerSecond() {
-    Cps = (Upgradeint * 0.01) + (Upgradeint2 * 1) + (Upgradeint3 * 6) + (Upgradeint4 * 33) + (Upgradeint5 * 182) + (Upgradeint5 * 1001) + (Upgradeint7 * 5505);
-    document.getElementById("CPSTextDisplay").innerHTML = Cps + " Generated/s";
-}
-
 
 function Upgradecps() {
     Money = Money + Upgradeint * 1 / 100;
@@ -398,19 +453,6 @@ function HardReset() {
 }
 
 
-function PrestigeInterval() {
-    perc = (AllTimeMoney / PrestigeGoal) * 100;
-    document.getElementById("PPDisplay").innerHTML = "Clicks " + PrestigeMultiplier + "x";
-    if (PrestigeGoal >= AllTimeMoney) {
-        Math.round((perc + Number.EPSILON) * 100) / 100
-        document.getElementById("ATMBarID").style.height = 5 + perc + "%";
-        document.getElementById("ATMBarID").innerHTML = Math.round((perc + Number.EPSILON) * 100) / 100 + "%";
-    } else {
-        PrestigeMultiplier = PrestigeMultiplier * 2;
-        PrestigeGoal = PrestigeGoal * 3;
-        PrestigeScore = PrestigeScore + 1;
-    }
-}
 
 
 function RawCPSRender() {
@@ -561,46 +603,4 @@ var followCursor = (
 window.onload = function() {
     followCursor.init();
     document.body.onmousemove = followCursor.run;
-}
-
-function SabloChanger() {
-    document.getElementById("PrestigeScoreDisplay").innerHTML = PrestigeScore + ". Prestige level";
-    switch (PrestigeScore) {
-        case 1:
-            document.getElementById("SImage").src = "Sablos/sabloclick.png";
-            document.getElementById("BackgroundIMG").src = "Background/Basement.jpg";
-            break;
-        case 2:
-            document.getElementById("SImage").src = "Sablos/SabloRee.png";
-            document.getElementById("BackgroundIMG").src = "Background/SHell.jpg";
-            break;
-        case 3:
-            document.getElementById("SImage").src = "Sablos/RetroSablo.png";
-            document.getElementById("BackgroundIMG").src = "Background/SRetB.jpg";
-            break;
-        case 4:
-            document.getElementById("SImage").src = "Sablos/SabloDrip.png";
-            document.getElementById("BackgroundIMG").src = "Background/SDripB.jpg";
-            break;
-        case 5:
-            document.getElementById("SImage").src = "Sablos/Xiablo.png";
-            document.getElementById("BackgroundIMG").src = "Background/XiabloB.jpg";
-            break;
-        case 6:
-            document.getElementById("SImage").src = "Sablos/SabloDripWT.png";
-            document.getElementById("BackgroundIMG").src = "Background/SabloCar.jpg";
-            break;
-        case 7:
-            document.getElementById("SImage").src = "Sablos/SabloGun.png";
-            document.getElementById("BackgroundIMG").src = "Background/SabloGunB.jpg";
-            break;
-        case 8:
-            document.getElementById("SImage").src = "Sablos/SabloPenis.png";
-            document.getElementById("BackgroundIMG").src = "Background/Kachlicky.jpg";
-            break;
-        default:
-            document.getElementById("SImage").src = "Sablos/SabloDrip.png";
-            document.getElementById("BackgroundIMG").src = "Background/SDripB.jpg";
-            break;
-    }
 }
