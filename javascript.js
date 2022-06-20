@@ -453,7 +453,7 @@ function anticheatASK() {
     clearInterval(anticheatdecrease);
     asknsum = prompt('Are you still there?\n' + askn1 + '+' + askn2 + '=' + ' x ' + '\nWhat is the x?', "");
     if (asknsum == asknsumm) {
-        alert('Correct answer\nPlease enjoy playin SábloClicker');
+        alert('Correct answer\nPlease enjoy playing SábloClicker');
     } else {
         anticheatASK();
     }
