@@ -143,12 +143,84 @@ let ATMMultiplier = 1;
 let PrestigeScore = 1;
 comboB = false;
 RawCPSRender();
+
+
+/* Intervals */
 setInterval(RawCPSRender, 1000)
 setInterval(Upgradecps, 100);
 setInterval(saveData, 500);
-setInterval(RepeatPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMathIntervalComboIntervalSabloChanger, 0);
+setInterval(RepeatUpgradeCheckPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMathIntervalComboIntervalSabloChanger, 0);
 
-function RepeatPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMathIntervalComboIntervalSabloChanger() {
+UBInt = 0;
+
+document.getElementById("UB2").style.display = "none";
+document.getElementById("upgrade2").style.display = "none";
+document.getElementById("UB3").style.display = "none";
+document.getElementById("upgrade3").style.display = "none";
+document.getElementById("UB4").style.display = "none";
+document.getElementById("upgrade4").style.display = "none";
+document.getElementById("UB5").style.display = "none";
+document.getElementById("upgrade5").style.display = "none";
+document.getElementById("UB5").style.display = "none";
+document.getElementById("upgrade5").style.display = "none";
+document.getElementById("UB6").style.display = "none";
+document.getElementById("upgrade6").style.display = "none";
+document.getElementById("UB7").style.display = "none";
+document.getElementById("upgrade7").style.display = "none";
+
+function RepeatUpgradeCheckPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMathIntervalComboIntervalSabloChanger() {
+
+
+    /* UpgradeCheck */
+    if (Upgradeint >= 5) {
+        UBInt = 1;
+    }
+    if (Upgradeint2 >= 5) {
+        UBInt = 2;
+    }
+    if (Upgradeint3 >= 5) {
+        UBInt = 3;
+    }
+    if (Upgradeint4 >= 5) {
+        UBInt = 4;
+    }
+    if (Upgradeint5 >= 5) {
+        UBInt = 5;
+    }
+    if (Upgradeint6 >= 5) {
+        UBInt = 6;
+    }
+    switch (UBInt) {
+        case 1:
+            document.getElementById("UB2").style.display = "block";
+            document.getElementById("upgrade2").style.display = "block";
+            break;
+        case 2:
+            document.getElementById("UB3").style.display = "block";
+            document.getElementById("upgrade3").style.display = "block";
+            break;
+        case 3:
+            document.getElementById("UB4").style.display = "block";
+            document.getElementById("upgrade4").style.display = "block";
+            break;
+        case 4:
+            document.getElementById("UB5").style.display = "block";
+            document.getElementById("upgrade5").style.display = "block";
+            break;
+        case 5:
+            document.getElementById("UB6").style.display = "block";
+            document.getElementById("upgrade6").style.display = "block";
+            break;
+        case 6:
+            document.getElementById("UB2").style.display = "block";
+            document.getElementById("upgrade2").style.display = "block";
+            break;
+        case 7:
+            document.getElementById("UB7").style.display = "block";
+            document.getElementById("upgrade7").style.display = "block";
+            break;
+    }
+
 
 
     /* PrestigeInterval */
