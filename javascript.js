@@ -151,7 +151,6 @@ setInterval(Upgradecps, 100);
 setInterval(saveData, 500);
 setInterval(RepeatUpgradeCheckPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMathIntervalComboIntervalSabloChanger, 0);
 
-UBInt = 0;
 
 document.getElementById("UB2").style.display = "none";
 document.getElementById("upgrade2").style.display = "none";
@@ -173,52 +172,28 @@ function RepeatUpgradeCheckPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMa
 
     /* UpgradeCheck */
     if (Upgradeint >= 5) {
-        UBInt = 1;
+        document.getElementById("UB2").style.display = "block";
+        document.getElementById("upgrade2").style.display = "block";
     }
     if (Upgradeint2 >= 5) {
-        UBInt = 2;
+        document.getElementById("UB3").style.display = "block";
+        document.getElementById("upgrade3").style.display = "block";
     }
     if (Upgradeint3 >= 5) {
-        UBInt = 3;
+        document.getElementById("UB4").style.display = "block";
+        document.getElementById("upgrade4").style.display = "block";
     }
     if (Upgradeint4 >= 5) {
-        UBInt = 4;
+        document.getElementById("UB5").style.display = "block";
+        document.getElementById("upgrade5").style.display = "block";
     }
     if (Upgradeint5 >= 5) {
-        UBInt = 5;
+        document.getElementById("UB6").style.display = "block";
+        document.getElementById("upgrade6").style.display = "block";
     }
     if (Upgradeint6 >= 5) {
-        UBInt = 6;
-    }
-    switch (UBInt) {
-        case 1:
-            document.getElementById("UB2").style.display = "block";
-            document.getElementById("upgrade2").style.display = "block";
-            break;
-        case 2:
-            document.getElementById("UB3").style.display = "block";
-            document.getElementById("upgrade3").style.display = "block";
-            break;
-        case 3:
-            document.getElementById("UB4").style.display = "block";
-            document.getElementById("upgrade4").style.display = "block";
-            break;
-        case 4:
-            document.getElementById("UB5").style.display = "block";
-            document.getElementById("upgrade5").style.display = "block";
-            break;
-        case 5:
-            document.getElementById("UB6").style.display = "block";
-            document.getElementById("upgrade6").style.display = "block";
-            break;
-        case 6:
-            document.getElementById("UB2").style.display = "block";
-            document.getElementById("upgrade2").style.display = "block";
-            break;
-        case 7:
-            document.getElementById("UB7").style.display = "block";
-            document.getElementById("upgrade7").style.display = "block";
-            break;
+        document.getElementById("UB7").style.display = "block";
+        document.getElementById("upgrade7").style.display = "block";
     }
 
 
@@ -268,7 +243,7 @@ function RepeatUpgradeCheckPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMa
 
     /* AutoClicksPerSecond */
     Cps = (Upgradeint * 0.01) + (Upgradeint2 * 1) + (Upgradeint3 * 6) + (Upgradeint4 * 33) + (Upgradeint5 * 182) + (Upgradeint5 * 1001) + (Upgradeint7 * 5505);
-    document.getElementById("CPSTextDisplay").innerHTML = Cps + " Generated/s";
+    document.getElementById("CPSTextDisplay").innerHTML = Math.round(Cps * 100) / 100 + " Generated/s";
 
 
     /* ComboMathInterval */
