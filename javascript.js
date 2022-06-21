@@ -536,6 +536,7 @@ function RawCPSRender() {
 
     if (RawCPSDisplayedRender >= 18) {
         Money = 0;
+        AllTimeMoney = AllTimeMoney - Math.round(MPSInt);
     }
 }
 
