@@ -219,7 +219,7 @@ function RepeatUpgradeCheckPrestigeIntervalRenderMoneyAutoClicksPerSecondComboMa
     document.getElementById("upgrade3").innerHTML = "‎ Chem teacher + 6 cps<br>‎ [cost " + Upgradecost3 + "]<br> ‎ Owned [" + Upgradeint3 + "] [" + Upgradeint3 * 6 + " money/s]";
     document.getElementById("upgrade4").innerHTML = "‎ 12min run + 33 cps<br>‎ [cost " + Upgradecost4 + "]<br> ‎ Owned [" + Upgradeint4 + "] [" + Upgradeint4 * 33 + " money/s]";
     document.getElementById("upgrade5").innerHTML = "‎ Inflatable boat + 182 cps<br>‎ [cost " + Upgradecost5 + "]<br> ‎ Owned [" + Upgradeint5 + "] [" + Upgradeint5 * 182 + " money/s]";
-    document.getElementById("upgrade6").innerHTML = "‎ Reality++ ‎ + 1001 cps<br>‎ [cost " + Upgradecost6 + "]<br> ‎ Owned [" + Upgradeint6 + "] [" + Upgradeint5 * 1001 + " money/s]";
+    document.getElementById("upgrade6").innerHTML = "‎ Reality++ ‎ + 1001 cps<br>‎ [cost " + Upgradecost6 + "]<br> ‎ Owned [" + Upgradeint6 + "] [" + Upgradeint6 * 1001 + " money/s]";
     document.getElementById("upgrade7").innerHTML = "‎ Moodle + 5505 cps<br>‎ [cost " + Upgradecost7 + "]<br> ‎ Owned [" + Upgradeint7 + "] [" + Upgradeint7 * 5505 + " money/s]";
     document.getElementById("PrestigeDisplay").innerHTML = AllTimeMoney + " / " + PrestigeGoal;
     document.getElementById("AllTimeMoneyID").innerHTML = AllTimeMoney + " All time money";
