@@ -388,7 +388,7 @@ function saveData() {
     localStorage.setItem("upgradei3", Upgradeint3);
     localStorage.setItem("upgradec3", Upgradecost3);
     localStorage.setItem("upgradei4", Upgradeint4);
-    localStorage.setItem("upgradeic4", Upgradecost4);
+    localStorage.setItem("upgradec4", Upgradecost4);
     localStorage.setItem("upgradei5", Upgradeint5);
     localStorage.setItem("upgradec5", Upgradecost5);
     localStorage.setItem("upgradei6", Upgradeint6);
@@ -413,14 +413,14 @@ function Upgradecps() {
     Money = Money + Upgradeint3 * 6 / 10;
     Money = Money + Upgradeint4 * 33 / 10;
     Money = Money + Upgradeint5 * 182 / 10;
-    Money = Money + Upgradeint5 * 1001 / 10;
+    Money = Money + Upgradeint6 * 1001 / 10;
     Money = Money + Upgradeint7 * 5505 / 10;
     AllTimeMoney = AllTimeMoney + Upgradeint * 1 / 100;
     AllTimeMoney = AllTimeMoney + Upgradeint2 * 1 / 10;
     AllTimeMoney = AllTimeMoney + Upgradeint3 * 6 / 10;
     AllTimeMoney = AllTimeMoney + Upgradeint4 * 33 / 10;
     AllTimeMoney = AllTimeMoney + Upgradeint5 * 182 / 10;
-    AllTimeMoney = AllTimeMoney + Upgradeint5 * 1001 / 10;
+    AllTimeMoney = AllTimeMoney + Upgradeint6 * 1001 / 10;
     AllTimeMoney = AllTimeMoney + Upgradeint7 * 5505 / 10;
 }
 
