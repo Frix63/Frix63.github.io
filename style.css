@@ -230,8 +230,8 @@ body {
 /*  Upgrade box style */
 
 .upgradeBox {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 350px;
+    max-width: 350px;
     top: 140px;
     left: 10px;
     border: solid 1px white;
