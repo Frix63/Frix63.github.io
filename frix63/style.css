@@ -29,7 +29,7 @@ body {
 
 .text {
     position: relative;
-    z-index: 3;
+    z-index: 1;
     color: #63E4F2;
     font-size: 2vw;
     padding: 28px 20px;
@@ -77,7 +77,7 @@ body {
 }
 
 .SideBar {
-    z-index: 3;
+    z-index: 5;
     width: 55px;
     height: 55px;
     background-color: #63E4F2;
