@@ -1,102 +1,34 @@
-<!--
-WORKING DO NOT TOUCH!!!
-Frix63
--->
-
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>SábloClicker by Chris</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
-<body style="background-color: black">
-    <meta meta name="viewport" content="width=device-width, user-scalable=no" />
-
-    <!-- Clickable button on the whole page -->
-    <a href="#" onmouseleave="anticheatleave()" onmousemove="anticheatmove()" id="Clickr" class="buttonStyle" onclick="tlacitko()">Click me</a>
-
-    <!-- Sáblos -->
-    <a href="#" class="errorMessage" onclick="clearData();">clear data</a>
-
-    <!-- Money display in top left corner -->
-    <div class="moneyText">
-        <h1 id="moneyCounter"></h1>
-    </div>
-
-    <!-- Combo -->
-    <div>
-        <h1 id="combo">Combo</h1>
-    </div>
-
-    <!-- Stats -->
-    <div class="InfoBox">
-        <div class="CPSDisplay" color position>
-            <h1 id="CPSTextDisplay">sabloSUS404</h1>
+<body>
+    <main>
+        <h1>Welcome to My Website</h1>
+        <div class="buttons">
+            <p style="color: White; font-size: 50px">
+                Links
+            </p>
+            <a href="sabloclicker/index.html">
+                <button class="button">
+                    Sábloclicker
+                </button>
+            </a>
+            <a href="frix63/index.html">
+                <button class="button">
+                    Frix63
+                </button>
+            </a>
         </div>
-        <div class="AllTimeMoney" color position>
-            <h1 id="AllTimeMoneyID">sabloSUS404</h1>
-        </div>
-        <div class="RawCPS" color position>
-            <h1 id="RawCPSID">sabloSUS404</h1>
-        </div>
-        <div class="MPSC" color position>
-            <h1 id="MPS">sabloSUS404</h1>
-        </div>
-        <div class="PStyle" color position>
-            <h1 id="PrestigeScoreDisplay">sabloSUS404</h1>
-        </div>
-    </div>
-
-    <!-- Sáblos -->
-    <div>
-        <img class="Rays2" src="Background/Rays.png" alt="rays2">
-        <img class="Rays" src="Background/Rays.png" alt="rays">
-        <img class="SDef" id="SImage" src="Sablos/sabloclick.png" alt="Sábloclick-default" unselectable="on">
-    </div>
-
-    <!-- Backgrounds -->
-    <div>
-        <img class="Basement" id="BackgroundIMG" src="Background/Basement.jpg" alt="Background-Basement" unselectable="on">
-    </div>
-
-    <!-- Prestige -->
-    <div class="PrestigeL">
-        <h1>Prestige level</h1>
-    </div>
-    <div class="ATMBar" position>
-        <div id="ATMBarID" class="ATMBarProgress">80%</div>
-        <div class="prestigePower">
-            <h1 id="PPDisplay">Prestige</h1>
-        </div>
-    </div>
-    <div class="buttonText">
-        <h1 id="PrestigeDisplay">Prestige</h1>
-    </div>
-
-    <!-- Upgrades -->
-    <div class="upgradeBox">
-        <img class="upgradeStyleB" src="UpgradeBgs/PrestigeStudents.jpg">
-        <img id="UB2" class="upgradeStyleB2" src="UpgradeBgs/Subsidies.jpg">
-        <img id="UB3" class="upgradeStyleB3" src="UpgradeBgs/ChemTeacher.jpg">
-        <img id="UB4" class="upgradeStyleB4" src="UpgradeBgs/12min.jpg">
-        <img id="UB5" class="upgradeStyleB5" src="UpgradeBgs/boat.jpg">
-        <img id="UB6" class="upgradeStyleB6" src="UpgradeBgs/Reality.jpg">
-        <img id="UB7" class="upgradeStyleB7" src="UpgradeBgs/Moodle.jpg">
-        <a href="#" id="upgrade1" class="upgradeStyle" onclick="Upgrade()"></a>
-        <a href="#" id="upgrade2" class="upgradeStyle2" onclick="Upgrade2()"></a>
-        <a href="#" id="upgrade3" class="upgradeStyle3" onclick="Upgrade3()"></a>
-        <a href="#" id="upgrade4" class="upgradeStyle4" onclick="Upgrade4()"></a>
-        <a href="#" id="upgrade5" class="upgradeStyle5" onclick="Upgrade5()"></a>
-        <a href="#" id="upgrade6" class="upgradeStyle6" onclick="Upgrade6()"></a>
-        <a href="#" id="upgrade7" class="upgradeStyle7" onclick="Upgrade7()"></a>
-    </div>
-
-
-    <script src="javascript.js"></script>
+    </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
