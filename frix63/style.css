@@ -31,10 +31,11 @@
         position: relative;
         z-index: 1;
         color: #63E4F2;
-        font-size: 2vw;
-        padding: 28px 20px;
+        left: 20px;
+        font-size: 1rem;
+        padding: 20px 10px;
+        margin: 40px 0px;
         float: left;
-        margin: 0 20vw;
         text-align: center;
         transition: width 0.2s;
         user-select: none;
@@ -208,12 +209,10 @@
         flex-direction: column;
         justify-content: space-evenly;
         flex-direction: row;
+        filter: drop-shadow(0px 0px 10px #63E4F2);
     }
     
-    .topbarbox:hover {
-        background-color: #29A7D9;
-    }
-    
+    .topbarbox:hover,
     .topbarbox:active {
         background-color: #29A7D9;
     }
@@ -235,4 +234,5 @@
         -moz-user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
+        filter: drop-shadow(0px 0px 10px #63E4F2);
     }
