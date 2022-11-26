@@ -241,3 +241,7 @@
         -ms-user-select: none;
         filter: drop-shadow(0px 0px 10px #63E4F2);
     }
+    
+    #aboutme {
+        margin: 18px auto;
+    }
