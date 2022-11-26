@@ -102,8 +102,11 @@
         .SideBarOpen {
             width: 0px!important;
         }
+        .homebutton {
+            width: 0px!important;
+        }
         .topbarbox {
-            height: 30px!important;
+            height: 50px!important;
         }
     }
     
@@ -192,6 +195,7 @@
         margin: 4px 5px;
         filter: invert(31%) sepia(20%) saturate(1974%) hue-rotate(159deg) brightness(95%) contrast(97%);
         overflow: hidden;
+        transition: width 0.2s;
         -moz-user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
@@ -226,7 +230,7 @@
     }
     
     .topbartext {
-        margin: 12px auto;
+        margin: 22px auto;
         font-size: 7px;
         -moz-user-select: none;
         -webkit-user-select: none;
