@@ -1,6 +1,8 @@
 switcher = false;
 switcher1 = false;
 
+document.addEventListener("touchstart", function() {}, false);
+
 function opensidebar() {
     if (switcher == false) {
         switcher = true;
