@@ -31,7 +31,7 @@
     
     .textleftbar {
         position: relative;
-        z-index: 3;
+        z-index: 5;
         color: #63E4F2;
         font-size: 20px;
         padding: 28px 20px;
@@ -96,7 +96,7 @@
     }
     
     .SideBarOpen {
-        z-index: 1;
+        z-index: 3;
         width: 0px;
         height: 530px;
         background-color: #115D8C;
@@ -113,7 +113,7 @@
     
     .SideBarOpened {
         display: inline-block;
-        z-index: 2;
+        z-index: 4;
         width: 50px;
         height: 55px;
         background-color: #63E4F2;
@@ -163,6 +163,7 @@
     }
     
     .page {
+        z-index: 0;
         position: absolute;
         width: 100%;
         height: auto;
@@ -175,10 +176,11 @@
     }
     
     .page1 {
-        border-radius: 50px;
-        width: 80vw;
+        z-index: 0;
+        border-radius: 3vw;
+        width: 90vw;
         height: auto;
-        margin: 90vh auto;
+        margin: 10vh auto;
         background-color: rgba(0, 0, 0, .5);
         overflow: hidden;
     }
@@ -186,7 +188,7 @@
     .text {
         position: relative;
         z-index: 1;
-        margin: 50px 50px;
+        margin: 3vh 3vw;
         color: #63E4F2;
         display: block;
         font-size: 1rem;
@@ -197,18 +199,40 @@
         -ms-user-select: none;
     }
     
+    .subheading {
+        position: relative;
+        z-index: 1;
+        margin: 3vh 3vw;
+        color: #63E4F2;
+        display: block;
+        font-size: 1.2rem;
+        user-select: none;
+        text-align: justify;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    
     .pfp {
         position: relative;
         display: block;
-        margin: 50px 50px;
-        width: 300px;
-        height: 300px;
+        margin: 3vh 3vw;
+        width: 20vw;
+        height: 20vw;
+        min-width: 150px;
+        min-height: 150px;
         float: left;
-        border-radius: 50px;
+        border-radius: 3vw;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
+    }
+    
+    @media screen and (max-width: 850px) {
+        .pfp {
+            margin-bottom: 0;
+        }
     }
     
     .homebutton {
