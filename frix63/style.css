@@ -31,7 +31,7 @@
     
     .textleftbar {
         position: relative;
-        z-index: 5;
+        z-index: 10;
         color: #63E4F2;
         font-size: 20px;
         padding: 28px 20px;
@@ -47,6 +47,7 @@
     }
     
     .textbutton {
+        z-index: 9;
         pointer-events: none;
         cursor: default;
         display: inline-block;
@@ -62,7 +63,7 @@
     }
     
     .SideBar {
-        z-index: 5;
+        z-index: 8;
         width: 55px;
         height: 55px;
         background-color: #63E4F2;
@@ -96,7 +97,7 @@
     }
     
     .SideBarOpen {
-        z-index: 3;
+        z-index: 4;
         width: 0px;
         height: 530px;
         background-color: #115D8C;
@@ -113,7 +114,7 @@
     
     .SideBarOpened {
         display: inline-block;
-        z-index: 4;
+        z-index: 6;
         width: 50px;
         height: 55px;
         background-color: #63E4F2;
@@ -129,8 +130,8 @@
     }
     
     .container {
-        z-index: 0;
-        width: 99.6vw;
+        z-index: -1;
+        width: 10;
         height: 99vh;
         top: 0;
         left: 0;
@@ -163,11 +164,10 @@
     }
     
     .page {
-        z-index: 0;
+        z-index: -2;
         position: absolute;
         width: 100%;
         height: auto;
-        max-height: 2000px;
         overflow: hidden;
         padding: 0 0;
         top: 0px;
@@ -176,7 +176,7 @@
     }
     
     .page1 {
-        z-index: 0;
+        z-index: 1;
         border-radius: 3vw;
         width: 90vw;
         height: auto;
@@ -249,14 +249,29 @@
         -ms-user-select: none;
     }
     
-    .topbar {
-        width: 100vw;
-        height: 100vh;
+    .topbarcontainer {
+        z-index: 5;
+        width: 99.6vw;
+        height: 0vh;
+        top: 0;
+        left: 0;
+        position: absolute;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+    }
+    
+    .topbar {
+        z-index: -5;
+        width: 100vw;
+        height: 0vh;
+        position: absolute;
+        display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
         filter: drop-shadow(0px 0px 10px #63E4F2);
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
     }
     
     .topbarbox:hover,
@@ -318,10 +333,27 @@
     }
     
     .photo {
-        z-index: 2;
+        max-width: 25vw;
+        height: 25vw;
         object-fit: cover;
+        width: 100%;
+        height: 100%;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    
+    .photoswrapper {
+        z-index: 2;
         max-width: 25vw;
         height: 25vw;
         padding: 0 0;
         margin: auto;
+        overflow: hidden;
+        transition: 0.1s;
+        margin-bottom: 5vw;
+    }
+    
+    .photoswrapper:hover {
+        filter: blur(3px) grayscale(80%);
     }

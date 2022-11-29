@@ -4,7 +4,6 @@
 <head>
     <title>Frix63</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="../javascript.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -18,9 +17,11 @@
         <div class="page1">
             <h2 class="subheading">Photos</h2>
             <div class="Photos">
-                <img src="../imgs/Photos/1.jpg" alt="photo1" class="photo">
-                <img src="../imgs/Photos/2.jpg" alt="photo2" class="photo">
-                <img src="../imgs/Photos/3.jpg" alt="photo3" class="photo">
+                <div id="duphotos1">
+                    <div class="photoswrapper">
+                        <img id="photo1" src="../imgs/Photos/Thumbnails/(1).jpg" alt="photo1" class="photo">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -57,6 +58,8 @@
                 <p id="sidebartext" class="textleftbar">Contact</p>
             </div>
         </div>
+    </div>
+    <div class="topbarcontainer">
         <div class="topbar">
             <div class="topbarbox">
                 <a href="../html/aboutme.html">
@@ -82,5 +85,7 @@
     </div>
 
 </body>
+
+<script src="../javascript.js"></script>
 
 </html>

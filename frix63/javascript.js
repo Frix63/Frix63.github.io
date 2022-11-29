@@ -1,7 +1,19 @@
 switcher = false;
 switcher1 = false;
+numImages = 50;
+var nothing = 1;
 
-document.addEventListener("touchstart", function() {}, false);
+function assignall() {
+    var x = 1;
+    for (x = 1; x <= numImages; x++) {
+        let elem = document.getElementById("duphotos1");
+        let clone = elem.cloneNode(true);
+        elem.id = "duphotos" + 1;
+        elem.after(clone);
+        document.getElementById('photo' + 1).src = "../imgs/Photos/Thumbnails/(" + x + ").jpg";
+    }
+}
+assignall();
 
 function opensidebar() {
     if (switcher == false) {
@@ -16,7 +28,3 @@ function opensidebar() {
         document.getElementsByClassName("text").style.color = "#4F238C";
     }
 }
-
-window.addEventListener('scroll', () => {
-    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-}, false);
