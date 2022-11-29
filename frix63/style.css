@@ -308,3 +308,20 @@
         text-decoration: none;
         color: inherit;
     }
+    
+    .Photos {
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 0px;
+    }
+    
+    .photo {
+        z-index: 2;
+        object-fit: cover;
+        max-width: 25vw;
+        height: 25vw;
+        padding: 0 0;
+        margin: auto;
+    }
