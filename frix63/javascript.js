@@ -4,8 +4,8 @@ numImages = 50;
 var nothing = 1;
 
 function assignall() {
-    var x = 1;
-    for (x = 1; x <= numImages; x++) {
+    var x;
+    for (x = 2; x <= numImages; x++) {
         let elem = document.getElementById("duphotos1");
         let clone = elem.cloneNode(true);
         elem.id = "duphotos" + 1;
