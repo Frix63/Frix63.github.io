@@ -400,14 +400,13 @@
         height: 100%;
     }
     
-    .ImageView {
-        display: none;
+    .ImageViewBackgroundDiv {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 20;
         height: 100vh;
-        width: 100vw;
+        width: 50vw;
         background-color: white;
         opacity: 50%;
     }

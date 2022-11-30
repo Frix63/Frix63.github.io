@@ -1,9 +1,8 @@
 switcher = false;
 switcher1 = false;
 numImages = 50;
-var nothing = 1;
 
-function assignall() {
+function PhotoGeneration() {
     var x;
     for (x = 2; x <= numImages; x++) {
         let elem = document.getElementById("duphotos1");
@@ -13,7 +12,7 @@ function assignall() {
         document.getElementById('photo' + 1).src = "../imgs/Photos/Thumbnails/(" + x + ").jpg";
     }
 }
-assignall();
+PhotoGeneration();
 
 function opensidebar() {
     if (switcher == false) {
@@ -27,4 +26,9 @@ function opensidebar() {
         document.getElementById("SB2").style.width = "0px";
         document.getElementsByClassName("text").style.color = "#4F238C";
     }
+}
+
+function ImageEnlargeFunction() {
+    var element = document.getElementsByClassName('ImageViewBackgroundDiv').style;
+    element.height = "0px";
 }
