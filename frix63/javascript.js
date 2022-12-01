@@ -7,9 +7,10 @@ function PhotoGeneration() {
     for (x = 2; x <= numImages; x++) {
         let elem = document.getElementById("duphotos1");
         let clone = elem.cloneNode(true);
-        elem.id = "duphotos" + 1;
+        elem.id = "duphotos" + x;
         elem.after(clone);
-        document.getElementById('photo' + 1).src = "../imgs/Photos/Thumbnails/(" + x + ").jpg";
+        document.getElementById('photo1').src = "../imgs/Photos/Thumbnails/(" + x + ").jpg";
+        document.getElementById('photo1').id = "photo" + x;
     }
 }
 PhotoGeneration();
@@ -29,6 +30,12 @@ function opensidebar() {
 }
 
 function ImageEnlargeFunction() {
-    var element = document.getElementsByClassName('ImageViewBackgroundDiv').style;
-    element.height = "0px";
+    document.getElementById('IVBD').style.display = "flex";
+    var imgsrcelement = document.getElementById(event.srcElement.id).src;
+    imgsrcelement = imgsrcelement.replace('Thumbnails', 'Enlarged');
+    document.getElementById('enlargedIMG').src = imgsrcelement;
+}
+
+function ImageEnlargeFunctionClose() {
+    document.getElementById('IVBD').style.display = "none";
 }
