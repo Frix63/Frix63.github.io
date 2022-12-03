@@ -338,6 +338,7 @@ a:active {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 1vw;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
