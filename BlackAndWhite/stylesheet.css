@@ -4,6 +4,9 @@ html, body{
     top: -4px;
     left: -4px;
 }
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
 body {
     height: 1000vh;
     width: 100%;
