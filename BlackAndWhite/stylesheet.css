@@ -1,6 +1,12 @@
+html, body{
+    overflow-x: hidden;
+    position: relative;
+    top: -4px;
+    left: -4px;
+}
 body {
     height: 1000vh;
-    width: 10vw;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
 }
 .backgroundBottom {
