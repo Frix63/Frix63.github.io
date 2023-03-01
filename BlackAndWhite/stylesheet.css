@@ -1,11 +1,5 @@
 html, body{
     overflow-x: hidden;
-    position: relative;
-    top: -4px;
-    left: -4px;
-}
-::-webkit-scrollbar {
-    -webkit-appearance: none;
 }
 body {
     height: 1000vh;
