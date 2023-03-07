@@ -153,9 +153,9 @@ li a {
 .officialShopTextDiv {
     z-index: 1;
     position: absolute;
-    top: calc(180px + 55vw);
+    top: calc(150px + 38vw);
     left: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -10%);
     padding: 10px;
     width: 70vw;
     height: 10vw;
@@ -169,10 +169,10 @@ li a {
 .graphicLine {
     z-index: 1;
     position: absolute;
-    top: calc(180px + 52vw);
+    top: calc(150px + 38vw);
     left: 50%;
-    transform: translate(-50%, -9000%);
-    padding: 0;
+    transform: translate(-50%, -200%);
+    margin: 0;
     width: 40vw;
     height: 0.2vw;
     color: white;
@@ -191,16 +191,16 @@ footer {
 }
 
 .copyright {
-    font-size: 4vw;
+    font-size: 3vw;
     float: left;
-    transform: translate(+10px);
+    transform: translate(+0.5vw);
     color: white;
     margin: 0 0;
 }
 .Signature {
-    font-size: 4vw;
+    font-size: 3vw;
     float: right;
-    transform: translate(-10px);
+    transform: translate(-0.5vw);
     color: white;
     margin: 0 0;
 }
