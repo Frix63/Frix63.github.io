@@ -8,10 +8,7 @@ body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
 }
-@font-face {
-    font-family: 'Roboto';
-    src: url(https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Roboto:wght@300&display=swap);
-}
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Roboto:wght@300&display=swap');
 .backgroundBottom {
     position: absolute;
     left: 0;
@@ -104,7 +101,7 @@ ul {
     left: 100px;
     top: 0;
     position: absolute;
-    width: 60%;
+    width: 75%;
     height: 50px;
     list-style-type: none;
     margin: 0;
@@ -160,7 +157,7 @@ li a {
     left: 50%;
     transform: translate(-50%, -150%);
     padding: 10px;
-    width: 50vw;
+    width: 70vw;
     height: 10vw;
     text-align: center;
     vertical-align: middle;
