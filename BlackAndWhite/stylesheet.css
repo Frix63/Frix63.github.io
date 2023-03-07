@@ -8,6 +8,10 @@ body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
 }
+@font-face {
+    font-family: 'Roboto';
+    src: url(https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Roboto:wght@300&display=swap);
+}
 .backgroundBottom {
     position: absolute;
     left: 0;
