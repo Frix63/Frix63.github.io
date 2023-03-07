@@ -26,12 +26,28 @@ body {
     height: 55vw;
     width: 50%;
 }
+.ObrazekMobile {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: calc(180px + 55vw);
+    height: 55vw;
+    width: 100%;
+}
 .productImage {
     position: absolute;
     left: 50%;
     transform: translate(-40%, 0);
     width: auto;
     height: 30vw;
+    border-radius: 10px;
+}
+.productImageMobile {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: auto;
+    height: 40vw;
     border-radius: 10px;
 }
 .TextProduct {
@@ -231,4 +247,11 @@ footer {
     transform: translate(-0.5vw);
     color: white;
     margin: 0 0;
+}
+
+
+@media screen and (max-width: 850px) {
+    .Obrazek, .TextProduct, article{
+        display: none!important;
+    }
 }
