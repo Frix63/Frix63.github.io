@@ -1,26 +1,28 @@
 html, body{
-    overflow-x: hidden;
+    overflow: auto;
 }
 body {
-    height: 1000vh;
+    overflow: hidden;
+    margin: 0 0;
+    height: calc(50px + 55vw + 200px + 55vw + 5vw);
     width: 100%;
     font-family: 'Roboto', sans-serif;
 }
 .backgroundBottom {
-    z-index: -1;
     position: absolute;
     left: 0;
     top: calc(50px + 55vw);
-    height: 1500px;
+    height: calc(200px + 55vw);
     width: 100%;
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(79,79,79,1) 100%);
 }
 .Obrazek {
+    z-index: 1;
     position: absolute;
     left: 0;
-    top: calc(500px + 55vw);
-    height: 800px;
+    top: calc(180px + 55vw);
+    height: 55vw;
     width: 50%;
 }
 .productImage {
@@ -35,15 +37,16 @@ body {
     z-index: 1;
     position: absolute;
     right: 0;
-    top: calc(500px + 55vw);
-    height: 800px;
+    top: calc(180px + 55vw);
+    height: 55vw;
     width: 50%;
     color: white;
 }
 article{
     position: absolute;
+    width: 40vw;
     left: 50%;
-    transform: translate(-90%, 0);
+    transform: translate(-57%, 0);
 }
 h2 {
     margin: 0 0;
@@ -85,7 +88,7 @@ p {
     left: 50%;
     transform: translate(-50%, +20%);
     padding: 10px;
-    width: 1300px;
+    width: 80vw;
     height: 10vw;
     text-align: center;
     vertical-align: middle;
@@ -97,7 +100,7 @@ ul {
     left: 100px;
     top: 0;
     position: absolute;
-    width: 80%;
+    width: 60%;
     height: 50px;
     list-style-type: none;
     margin: 0;
@@ -149,7 +152,7 @@ li a {
 .officialShopTextDiv {
     z-index: 1;
     position: absolute;
-    top: calc(500px + 55vw);
+    top: calc(180px + 55vw);
     left: 50%;
     transform: translate(-50%, -150%);
     padding: 10px;
@@ -165,7 +168,7 @@ li a {
 .graphicLine {
     z-index: 1;
     position: absolute;
-    top: calc(500px + 55vw);
+    top: calc(180px + 52vw);
     left: 50%;
     transform: translate(-50%, -9000%);
     padding: 0;
@@ -173,4 +176,30 @@ li a {
     height: 0.2vw;
     color: white;
     background: white;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    top: calc(50px + 55vw + 200px + 55vw);
+    width: 100%;
+    height: 5vw;
+    background: black;
+    text-align: center;
+    line-height: 5vw; 
+}
+
+.copyright {
+    font-size: 4vw;
+    float: left;
+    transform: translate(+10px);
+    color: white;
+    margin: 0 0;
+}
+.Signature {
+    font-size: 4vw;
+    float: right;
+    transform: translate(-10px);
+    color: white;
+    margin: 0 0;
 }
